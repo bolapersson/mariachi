@@ -230,7 +230,8 @@
     font-family: system-ui, sans-serif; font-size: 13px; color: var(--gold-bright);
     cursor: pointer; transition: background 0.15s;
   }
-  .social:hover { background: rgba(224,168,60,0.15); }
+  .social { text-decoration: none; }
+  .social:hover { background: rgba(224,168,60,0.15); color: var(--gold-bright); }
   .foot-meta { font-family: system-ui, sans-serif; font-size: 12px; color: var(--muted); text-align: right; }
   .foot-meta .hash { color: var(--gold-bright); }
 
@@ -412,15 +413,15 @@
       </div>
     </div>
     <div class="socials">
-      <div class="social" title="Facebook">
+      <a class="social" href="https://www.facebook.com/search/top?q=mariachi%20fiesta%20m%C3%A9xico" target="_blank" rel="noopener" title="Facebook — Mariachi Fiesta México">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.3V11H8.5v3h2.8v7h2.2z"/></svg>
-      </div>
-      <div class="social" title="Instagram">
+      </a>
+      <a class="social" href="https://www.instagram.com/fiestamexico/" target="_blank" rel="noopener" title="Instagram — @fiestamexico">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
-      </div>
-      <div class="social" title="YouTube">
+      </a>
+      <a class="social" href="https://www.youtube.com/@fiestamexico" target="_blank" rel="noopener" title="YouTube — @fiestamexico">
         <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8c1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15.2V8.8l5.2 3.2L10 15.2z"/></svg>
-      </div>
+      </a>
     </div>
     <div class="foot-meta">
       <div class="hash">#mariachisueco</div>
@@ -441,9 +442,7 @@
       }
     });
   });
-  document.querySelectorAll(".social").forEach(function (s) {
-    s.title = "Placeholder — riktig länk läggs in vid publicering";
-  });
+  // Sociala ikonerna är nu riktiga länkar (Facebook/Instagram/YouTube).
 
   // === Språkväljare: SV / EN / ES ===
   // Svenska original sparas från HTML; EN/ES finns i ordboken nedan.
@@ -575,6 +574,6 @@
   })();
 </script>
 
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" nonce="RRE/tXLHy/0wzlsy9JbjxQ==" data-cf-beacon='{"version":"2024.11.0","token":"36b4216ae2dc4d5488c249161e71fe1e","spa":2}' crossorigin="anonymous"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" nonce="cg0XCyP8xQiY8foj0GN6Mw==" data-cf-beacon='{"version":"2024.11.0","token":"36b4216ae2dc4d5488c249161e71fe1e","spa":2}' crossorigin="anonymous"></script>
 </body>
 </html>
