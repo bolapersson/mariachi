@@ -128,7 +128,9 @@
   .gig-empty a { color: var(--gold-bright); }
 
   /* Videos */
-  .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; }
+  .video-grid { display: grid; gap: 22px; }
+  .video-row { display: flex; gap: 22px; justify-content: center; flex-wrap: wrap; }
+  .video-row .video-card { flex: 1 1 320px; max-width: 560px; }
   .video-card {
     background: var(--panel); border-radius: 12px; overflow: hidden;
     border: 1px solid rgba(224,168,60,0.2);
@@ -331,6 +333,7 @@
           <div class="d" data-i18n="v1-d">Kungsträdgården / Etnografiska · © Karen Pérez Guzmán</div>
         </div>
       </div>
+      <div class="video-row">
       <div class="video-card">
         <a class="video-link" href="https://youtu.be/UukI89bmkYo" target="_blank" rel="noopener">
         <div class="video-thumb">
@@ -354,6 +357,7 @@
           <div class="t"><a href="https://youtube.com/shorts/wAbfipdLSX0" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(224,168,60,0.5);">Si nos dejan</a></div>
           <div class="d" data-i18n="v3-d">Gröna Lund · © Nina</div>
         </div>
+      </div>
       </div>
     </div>
   </div>
@@ -593,6 +597,6 @@
   })();
 </script>
 
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" nonce="+3qfRItus3EpjTORhYMlQw==" data-cf-beacon='{"version":"2024.11.0","token":"36b4216ae2dc4d5488c249161e71fe1e","spa":2}' crossorigin="anonymous"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" nonce="J7GI7paOCd6NSlx/KKatOg==" data-cf-beacon='{"version":"2024.11.0","token":"36b4216ae2dc4d5488c249161e71fe1e","spa":2}' crossorigin="anonymous"></script>
 </body>
 </html>
