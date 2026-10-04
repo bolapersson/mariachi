@@ -74,7 +74,7 @@
   }
   .hero-inner { position: relative; padding: 60px 20px; max-width: 860px; }
   .hero-photo {
-    position: relative; margin: 40px auto 0; max-width: 760px;
+    position: relative; margin: 40px auto 0; max-width: 912px;
     aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden;
     border: 2px solid rgba(224,168,60,0.5);
     box-shadow: 0 18px 60px rgba(0,0,0,0.55);
@@ -213,9 +213,11 @@
   .chips { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 28px; }
   .chip {
     font-family: system-ui, sans-serif; font-size: 12.5px;
-    padding: 7px 14px; border-radius: 22px;
-    background: rgba(47,107,79,0.25); color: #9fd4b8;
-    border: 1px solid rgba(47,107,79,0.5);
+    padding: 5px 12px; border-radius: 6px;
+    background: transparent; color: var(--muted);
+    border: 1px solid rgba(203,179,145,0.35);
+    cursor: default; user-select: none;
+    letter-spacing: 0.02em;
   }
   .gdpr-note { font-family: system-ui, sans-serif; font-size: 11.5px; color: rgba(203,179,145,0.65); margin-top: 20px; }
 
@@ -390,6 +392,7 @@
     <div class="book-box">
       <h3 data-i18n="book-h3">Snabbt, enkelt och säkert</h3>
       <p data-i18n="book-p">Skicka en förfrågan — vi återkommer med bekräftelse, tillgänglighet och detaljer.</p>
+      <p style="font-family:system-ui,sans-serif;font-size:12.5px;color:rgba(203,179,145,0.7);margin-bottom:18px;" data-i18n="book-chips-label">Vi spelar bland annat på:</p>
       <div class="chips">
         <span class="chip" data-i18n="chip-1">💒 Bröllop</span>
         <span class="chip" data-i18n="chip-2">🎉 Företagsevent</span>
@@ -473,6 +476,7 @@
       "book-kicker": "Book us", "book-h2": "Ready for <em>your event?</em>",
       "book-h3": "Fast, easy and secure",
       "book-p": "Send an inquiry — we'll get back to you with confirmation, availability and details.",
+      "book-chips-label": "We perform at for example:",
       "chip-1": "💒 Weddings", "chip-2": "🎉 Corporate events", "chip-3": "🎂 Birthdays", "chip-4": "🎪 Festivals", "chip-5": "🎭 Cultural events",
       "book-btn": "📩 Send booking inquiry",
       "gdpr": "🔒 Your details (name, email and phone) are handled in a GDPR-safe way and used only to plan your event. We never share your details with third parties.",
@@ -504,6 +508,7 @@
       "book-kicker": "Contrátanos", "book-h2": "¿Listos para <em>tu evento?</em>",
       "book-h3": "Rápido, fácil y seguro",
       "book-p": "Envía una solicitud — respondemos con confirmación, disponibilidad y detalles.",
+      "book-chips-label": "Tocamos por ejemplo en:",
       "chip-1": "💒 Bodas", "chip-2": "🎉 Eventos de empresa", "chip-3": "🎂 Cumpleaños", "chip-4": "🎪 Festivales", "chip-5": "🎭 Eventos culturales",
       "book-btn": "📩 Enviar solicitud de reserva",
       "gdpr": "🔒 Tus datos (nombre, correo y teléfono) se tratan de forma segura según el GDPR y solo se usan para planear tu evento. Nunca compartimos tus datos con terceros.",
@@ -574,6 +579,6 @@
   })();
 </script>
 
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" nonce="c2WGUCPSGmxqUFvH2bhctw==" data-cf-beacon='{"version":"2024.11.0","token":"36b4216ae2dc4d5488c249161e71fe1e","spa":2}' crossorigin="anonymous"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" nonce="OruUw4yD63+SMrBm9kNVSA==" data-cf-beacon='{"version":"2024.11.0","token":"36b4216ae2dc4d5488c249161e71fe1e","spa":2}' crossorigin="anonymous"></script>
 </body>
 </html>
