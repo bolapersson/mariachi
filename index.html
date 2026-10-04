@@ -1,5 +1,3 @@
----
-
 <!doctype html>
 <html lang="sv">
 <head>
@@ -247,11 +245,12 @@
 <div class="topbar">
   <div class="maxw">
     <div class="brand">
-      <!-- Vid publicering: byt till riktig logga. Ersätt raden under med:
-           <img src="Logo_Transparent.png" alt="Mariachi Fiesta México" style="height:52px;">
-           (Logo_Transparent.png = bandets logga med transparent bakgrund, filen läggs bredvid index.html) -->
-      <div class="brand-mark">M</div>
-      <div class="brand-name">MARIACHI <b>Fiesta México</b></div>
+      <!-- Riktig logga: Logo_Transparent.png (transparent bakgrund, bred) -->
+      <img src="Logo_Transparent.png" alt="Mariachi Fiesta México" style="height:52px;" onerror="this.style.display='none';document.getElementById('brand-fallback').style.display='flex';" />
+      <div id="brand-fallback" style="display:none;align-items:center;gap:10px;">
+        <div class="brand-mark">M</div>
+        <div class="brand-name">MARIACHI <b>Fiesta México</b></div>
+      </div>
     </div>
     <nav>
       <a href="#spelningar">Spelningar</a>
@@ -275,7 +274,7 @@
     <a class="btn btn-primary" href="#boka">Boka oss till ditt event</a>
     <a class="btn btn-ghost" href="#videos">Se våra videos ↓</a>
     <div class="hero-photo">
-      <span class="ph-label">Hero-foto: promo kit — Mariachi Fiesta México</span>
+      <img src="Hero.jpg" alt="Mariachi Fiesta México — hela bandet" style="width:100%;height:100%;object-fit:cover;" />
     </div>
   </div>
 </header>
@@ -336,22 +335,7 @@
           <div class="d">Kungsträdgården / Etnografiska</div>
         </div>
       </div>
-      <div class="video-card">
-        <a class="video-link" href="#" target="_blank" rel="noopener" data-youtube-pending>
-        <div class="video-thumb">
-          <div class="play-btn"></div>
-          <span class="ph-label" style="position:absolute;bottom:44px;">Spela på YouTube: Nunca es Suficiente — Gröna Lund</span>
-        </div>
-        </a>
-        <div class="video-meta">
-          <div class="t">Nunca es Suficiente</div>
-          <div class="d">Gröna Lund · Video från sommaren 2026</div>
-        </div>
-      </div>
     </div>
-    <p style="font-family: system-ui, sans-serif; font-size: 12px; color: rgba(203,179,145,0.6); margin-top: 14px;">
-      * Videokortet "Nunca es Suficiente" väntar på YouTube-länk — lägg till länken (eller mejla den) när videon är uppladdad, och kopiera in den i koden där <a href="#" data-youtube-pending> står.
-    </p>
   </div>
 </section>
 
@@ -360,15 +344,9 @@
     <div class="sec-kicker">I bild</div>
     <h2>Foton från <em>sommaren</em></h2>
     <div class="gallery">
-      <div class="ph ph-1">
-        <span class="ph-label">Huvudfoto — Karen Pérez Guzmán</span>
-        <span class="credit">© Karen Pérez Guzmán</span>
-      </div>
-      <div class="gallery-side">
-        <div class="ph ph-2">
-          <span class="ph-label">Gröna Lund — psp.gallery</span>
-          <span class="credit">© psp.gallery</span>
-        </div>
+      <div class="ph" style="min-height:420px;background:#241410;">
+        <img src="grona-lund.jpg" alt="På scen på Gröna Lund" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+        <span class="credit">© psp.gallery</span>
       </div>
     </div>
   </div>
@@ -501,5 +479,6 @@
   })();
 </script>
 
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" nonce="i3pYRtVcx5gohE5sEWtNHA==" data-cf-beacon='{"version":"2024.11.0","token":"36b4216ae2dc4d5488c249161e71fe1e","spa":2}' crossorigin="anonymous"></script>
 </body>
 </html>
