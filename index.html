@@ -1,0 +1,505 @@
+---
+
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mariachi Fiesta México — Designutkast</title>
+<style>
+  :root {
+    --bg: #1a0f0a;
+    --bg2: #241410;
+    --panel: #2e1a12;
+    --gold: #e0a83c;
+    --gold-bright: #f5c96a;
+    --cream: #f7ead5;
+    --terra: #c25a2e;
+    --terra-soft: #a34922;
+    --green: #2f6b4f;
+    --red: #a5231b;
+    --text: #f3e3cd;
+    --muted: #cbb391;
+    --serif: Georgia, "Times New Roman", serif;
+  }
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+  html { scroll-behavior: smooth; }
+  body {
+    font-family: var(--serif);
+    background: var(--bg);
+    color: var(--text);
+    line-height: 1.6;
+  }
+  .maxw { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+
+  /* Topbar */
+  .topbar {
+    position: sticky; top: 0; z-index: 50;
+    background: rgba(26,15,10,0.94);
+    border-bottom: 1px solid rgba(224,168,60,0.25);
+    backdrop-filter: blur(6px);
+  }
+  .topbar .maxw { display: flex; align-items: center; justify-content: space-between; height: 64px; }
+  .brand { display: flex; align-items: center; gap: 10px; }
+  .brand-mark {
+    width: 38px; height: 38px; border-radius: 50%;
+    background: radial-gradient(circle at 30% 30%, var(--gold-bright), var(--terra));
+    display: flex; align-items: center; justify-content: center;
+    font-size: 19px; color: #1a0f0a; font-weight: bold;
+    border: 2px solid var(--gold);
+  }
+  .brand-name { font-size: 19px; letter-spacing: 0.12em; color: #fff; }
+  .brand-name b { font-family: "Segoe Script", "Brush Script MT", cursive; font-size: 21px; font-weight: normal; letter-spacing: 0; color: #fff; padding-left: 2px; }
+  nav { display: flex; gap: 26px; font-family: system-ui, sans-serif; font-size: 13.5px; letter-spacing: 0.06em; }
+  nav a { color: var(--muted); text-decoration: none; text-transform: uppercase; }
+  nav a:hover { color: var(--gold-bright); }
+  .lang { display: flex; gap: 6px; font-family: system-ui, sans-serif; font-size: 12.5px; }
+  .lang span { padding: 3px 8px; border-radius: 12px; cursor: pointer; color: var(--muted); }
+  .lang .active { background: var(--gold); color: #1a0f0a; font-weight: 600; }
+
+  /* Hero */
+  .hero {
+    position: relative;
+    min-height: 88vh;
+    display: flex; align-items: center; justify-content: center;
+    text-align: center;
+    background:
+      radial-gradient(ellipse at 50% 0%, rgba(194,90,46,0.35), transparent 60%),
+      radial-gradient(ellipse at 50% 120%, rgba(47,107,79,0.3), transparent 55%),
+      linear-gradient(180deg, #22100b 0%, var(--bg) 70%);
+    overflow: hidden;
+  }
+  .hero-pattern {
+    position: absolute; inset: 0; opacity: 0.08;
+    background-image: repeating-linear-gradient(45deg, var(--gold) 0 2px, transparent 2px 22px),
+                      repeating-linear-gradient(-45deg, var(--gold) 0 2px, transparent 2px 22px);
+  }
+  .hero-inner { position: relative; padding: 60px 20px; max-width: 860px; }
+  .hero-photo {
+    position: relative; margin: 40px auto 0; max-width: 520px;
+    aspect-ratio: 16 / 9; border-radius: 14px; overflow: hidden;
+    border: 2px solid rgba(224,168,60,0.5);
+    box-shadow: 0 18px 60px rgba(0,0,0,0.55);
+    background:
+      radial-gradient(circle at 60% 35%, rgba(194,90,46,0.5), transparent 60%),
+      linear-gradient(160deg, #4a2414, #241410);
+    display: flex; align-items: flex-end; padding: 14px;
+  }
+  .hero-photo .ph-label { font-family: system-ui, sans-serif; font-size: 12px; color: rgba(247,234,213,0.85); letter-spacing: 0.08em; text-transform: uppercase; }
+  .hero-kicker {
+    font-family: system-ui, sans-serif; font-size: 13px; letter-spacing: 0.35em;
+    text-transform: uppercase; color: var(--gold); margin-bottom: 18px;
+  }
+  .hero h1 {
+    font-size: clamp(40px, 7vw, 74px); line-height: 1.05; color: #fff;
+    text-shadow: 0 4px 30px rgba(0,0,0,0.5);
+    margin-bottom: 14px;
+  }
+  .hero h1 em { font-style: normal; font-family: "Segoe Script", "Brush Script MT", cursive; font-size: 0.95em; color: var(--gold-bright); }
+  .hero-sub { font-size: clamp(17px, 2.4vw, 21px); color: var(--muted); font-style: italic; margin-bottom: 34px; }
+  .btn {
+    display: inline-block; padding: 14px 34px; border-radius: 40px;
+    font-family: system-ui, sans-serif; font-size: 15px; font-weight: 600;
+    text-decoration: none; letter-spacing: 0.04em; margin: 0 8px;
+    transition: transform 0.15s ease;
+  }
+  .btn:hover { transform: translateY(-2px); }
+  .btn-primary { background: linear-gradient(135deg, var(--gold-bright), var(--terra)); color: #241410; box-shadow: 0 6px 24px rgba(224,168,60,0.35); }
+  .btn-ghost { border: 1.5px solid var(--gold); color: var(--gold-bright); }
+
+  /* Sections */
+  section { padding: 84px 0; }
+  .sec-kicker { font-family: system-ui, sans-serif; font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--terra); margin-bottom: 10px; }
+  h2 { font-size: clamp(28px, 4vw, 40px); color: var(--cream); margin-bottom: 28px; }
+  h2 em { font-style: normal; color: var(--gold-bright); }
+  .alt-bg { background: var(--bg2); }
+
+  /* Gig list */
+  .gig-list { display: grid; gap: 14px; max-width: 640px; }
+  .gig {
+    display: flex; align-items: center; gap: 18px;
+    background: var(--panel); border: 1px solid rgba(224,168,60,0.2);
+    border-radius: 12px; padding: 16px 20px;
+  }
+  .gig-date { text-align: center; min-width: 56px; }
+  .gig-date b { display: block; font-size: 26px; color: var(--gold-bright); line-height: 1; }
+  .gig-date span { font-family: system-ui, sans-serif; font-size: 11px; letter-spacing: 0.15em; color: var(--muted); }
+  .gig-info .t { font-size: 17px; color: var(--cream); }
+  .gig-info .d { font-family: system-ui, sans-serif; font-size: 12.5px; color: var(--muted); margin-top: 2px; }
+  .gig-empty { font-style: italic; color: var(--muted); }
+  .gig-empty a { color: var(--gold-bright); }
+
+  /* Videos */
+  .video-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 22px; }
+  .video-card {
+    background: var(--panel); border-radius: 12px; overflow: hidden;
+    border: 1px solid rgba(224,168,60,0.2);
+  }
+  .video-hero { grid-column: 1 / -1; border-color: rgba(224,168,60,0.45); box-shadow: 0 10px 40px rgba(0,0,0,0.4); }
+  .video-thumb {
+    aspect-ratio: 16 / 9; position: relative;
+    display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 12px;
+    background:
+      radial-gradient(circle at 50% 40%, rgba(194,90,46,0.4), transparent 65%),
+      linear-gradient(160deg, #3a2013, #1a0f0a);
+    cursor: pointer;
+  }
+  .video-thumb:hover .play-btn { transform: scale(1.1); }
+  .play-btn {
+    width: 62px; height: 62px; border-radius: 50%;
+    background: linear-gradient(135deg, var(--gold-bright), var(--terra));
+    display: flex; align-items: center; justify-content: center;
+    transition: transform 0.15s ease;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.45);
+  }
+  .play-btn::after {
+    content: ""; display: block; margin-left: 4px;
+    border-left: 20px solid #241410; border-top: 12px solid transparent; border-bottom: 12px solid transparent;
+  }
+  .video-thumb .tag {
+    position: absolute; top: 12px; left: 12px;
+    font-family: system-ui, sans-serif; font-size: 11px; letter-spacing: 0.1em;
+    background: rgba(26,15,10,0.8); color: var(--gold-bright);
+    padding: 4px 10px; border-radius: 14px; border: 1px solid rgba(224,168,60,0.4);
+  }
+  .video-link { text-decoration: none; display: block; color: inherit; }
+  .video-meta { padding: 14px 16px; }
+  .video-meta .t { font-size: 17px; color: var(--cream); }
+  .video-meta .d { font-family: system-ui, sans-serif; font-size: 12.5px; color: var(--muted); margin-top: 3px; }
+
+  /* Gallery */
+  .gallery { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; }
+  .gallery-side { display: grid; grid-template-rows: 1fr 1fr; gap: 16px; }
+  .ph {
+    border-radius: 12px; position: relative; overflow: hidden;
+    border: 1px solid rgba(224,168,60,0.2);
+    display: flex; align-items: flex-end; padding: 16px;
+    min-height: 180px;
+  }
+  .ph .credit {
+    position: absolute; bottom: 10px; right: 14px;
+    font-family: system-ui, sans-serif; font-size: 10.5px; color: rgba(247,234,213,0.7);
+    background: rgba(26,15,10,0.6); padding: 3px 9px; border-radius: 10px;
+  }
+  .ph-1 { background: linear-gradient(150deg, #7a2d14, #3a1a0e); min-height: 380px; }
+  .ph-2 { background: linear-gradient(150deg, #2f6b4f, #16321f); }
+  .ph-3 { background: linear-gradient(150deg, #8a2a22, #3a120e); }
+  .ph-label { font-family: system-ui, sans-serif; font-size: 12px; color: rgba(247,234,213,0.85); letter-spacing: 0.08em; text-transform: uppercase; }
+
+  /* Bio */
+  .bio { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 44px; align-items: start; }
+  .bio p { margin-bottom: 16px; color: var(--text); }
+  .bio .quote {
+    border-left: 3px solid var(--gold); padding: 6px 0 6px 18px;
+    font-style: italic; color: var(--muted); margin: 22px 0;
+  }
+  .bio-facts { display: grid; gap: 12px; }
+  .fact { background: var(--panel); border-radius: 10px; padding: 16px 18px; border: 1px solid rgba(224,168,60,0.15); }
+  .fact .n { font-size: 26px; color: var(--gold-bright); }
+  .fact .l { font-family: system-ui, sans-serif; font-size: 12.5px; color: var(--muted); }
+
+  /* Booking */
+  .book { text-align: center; }
+  .book-box {
+    max-width: 720px; margin: 0 auto;
+    background: linear-gradient(160deg, var(--panel), #241410);
+    border: 1px solid rgba(224,168,60,0.35);
+    border-radius: 16px; padding: 46px 34px;
+    box-shadow: 0 14px 50px rgba(0,0,0,0.45);
+  }
+  .book-box h3 { font-size: 24px; color: var(--cream); margin-bottom: 10px; }
+  .book-box p { color: var(--muted); margin-bottom: 24px; }
+  .chips { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 28px; }
+  .chip {
+    font-family: system-ui, sans-serif; font-size: 12.5px;
+    padding: 7px 14px; border-radius: 22px;
+    background: rgba(47,107,79,0.25); color: #9fd4b8;
+    border: 1px solid rgba(47,107,79,0.5);
+  }
+  .gdpr-note { font-family: system-ui, sans-serif; font-size: 11.5px; color: rgba(203,179,145,0.65); margin-top: 20px; }
+
+  /* Footer */
+  footer { background: #120a06; border-top: 1px solid rgba(224,168,60,0.2); padding: 40px 0 30px; }
+  .foot { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 18px; }
+  .socials { display: flex; gap: 14px; }
+  .social {
+    width: 40px; height: 40px; border-radius: 50%;
+    border: 1px solid rgba(224,168,60,0.4);
+    display: flex; align-items: center; justify-content: center;
+    font-family: system-ui, sans-serif; font-size: 13px; color: var(--gold-bright);
+    cursor: pointer; transition: background 0.15s;
+  }
+  .social:hover { background: rgba(224,168,60,0.15); }
+  .foot-meta { font-family: system-ui, sans-serif; font-size: 12px; color: var(--muted); text-align: right; }
+  .foot-meta .hash { color: var(--gold-bright); }
+
+  @media (max-width: 720px) {
+    .gallery { grid-template-columns: 1fr; }
+    .gallery-side { grid-template-columns: 1fr 1fr; grid-template-rows: none; }
+    .bio { grid-template-columns: 1fr; }
+    nav { display: none; }
+    .ph-1 { min-height: 240px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="maxw">
+    <div class="brand">
+      <!-- Vid publicering: byt till riktig logga. Ersätt raden under med:
+           <img src="Logo_Transparent.png" alt="Mariachi Fiesta México" style="height:52px;">
+           (Logo_Transparent.png = bandets logga med transparent bakgrund, filen läggs bredvid index.html) -->
+      <div class="brand-mark">M</div>
+      <div class="brand-name">MARIACHI <b>Fiesta México</b></div>
+    </div>
+    <nav>
+      <a href="#spelningar">Spelningar</a>
+      <a href="#videos">Videos</a>
+      <a href="#foton">Foton</a>
+      <a href="#om-oss">Om oss</a>
+      <a href="#boka">Boka</a>
+    </nav>
+    <div class="lang">
+      <span class="active">SV</span><span>EN</span><span>ES</span>
+    </div>
+  </div>
+</div>
+
+<header class="hero">
+  <div class="hero-pattern"></div>
+  <div class="hero-inner">
+    <div class="hero-kicker">Authentic Mexican Music · In Sweden</div>
+    <h1>MARIACHI<br /><em>Fiesta México</em></h1>
+    <p class="hero-sub">Värme, energi och tradition — från Mexiko, i Sverige</p>
+    <a class="btn btn-primary" href="#boka">Boka oss till ditt event</a>
+    <a class="btn btn-ghost" href="#videos">Se våra videos ↓</a>
+    <div class="hero-photo">
+      <span class="ph-label">Hero-foto: promo kit — Mariachi Fiesta México</span>
+    </div>
+  </div>
+</header>
+
+<section id="spelningar">
+  <div class="maxw">
+    <div class="sec-kicker">Kommande spelningar</div>
+    <h2>Nästa gång du kan <em>se oss live</em></h2>
+
+    <!-- Fallback: visas tills API-feeden (gigs.json) är på plats, och om den ej kan hämtas -->
+    <div class="gig-list" id="gig-list-fallback">
+      <div class="gig">
+        <div class="gig-date"><b>31</b><span>OKT</span></div>
+        <div class="gig-info">
+          <div class="t">Fiesta en el cementerio — Fest på kyrkogården</div>
+          <div class="d">Etnografiska museet · kl 11:00–17:00 · Día de Muertos med folkdans, mariachi &amp; marknad</div>
+        </div>
+      </div>
+      <div class="gig-empty">Fler publika spelningar publiceras löpande — <a href="#boka">boka oss till ditt event</a>!</div>
+    </div>
+
+    <!-- Renderas från gigs.json (Group Planner-API) när feeden finns -->
+    <div class="gig-list" id="gig-list" style="display:none;"></div>
+
+    <p id="gig-note" style="display:none; font-family: system-ui, sans-serif; font-size:11px; color: rgba(203,179,145,0.5); margin-top:10px;">
+      Spelningslistan hämtas automatiskt från bandets bokningssystem.
+    </p>
+  </div>
+</section>
+
+<section id="videos">
+  <div class="maxw">
+    <div class="sec-kicker">Se oss live</div>
+    <h2>Video från <em>spelningar 2026</em></h2>
+    <div class="video-grid">
+      <div class="video-card video-hero">
+        <a class="video-link" href="https://youtu.be/_LXjcF9zYGg" target="_blank" rel="noopener">
+        <div class="video-thumb">
+          <span class="tag">Hero-video</span>
+          <div class="play-btn"></div>
+          <span class="ph-label" style="position:absolute;bottom:44px;">Spela på YouTube: Fiesta México</span>
+        </div>
+        </a>
+        <div class="video-meta">
+          <div class="t"><a href="https://youtu.be/_LXjcF9zYGg" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(224,168,60,0.5);">Fiesta México</a></div>
+          <div class="d">Kungsträdgården / Etnografiska · Video från 2026</div>
+        </div>
+      </div>
+      <div class="video-card">
+        <a class="video-link" href="https://youtu.be/UukI89bmkYo" target="_blank" rel="noopener">
+        <div class="video-thumb">
+          <div class="play-btn"></div>
+          <span class="ph-label" style="position:absolute;bottom:44px;">Spela på YouTube: Puro Mexicano</span>
+        </div>
+        </a>
+        <div class="video-meta">
+          <div class="t"><a href="https://youtu.be/UukI89bmkYo" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(224,168,60,0.5);">Puro Mexicano</a></div>
+          <div class="d">Kungsträdgården / Etnografiska</div>
+        </div>
+      </div>
+      <div class="video-card">
+        <a class="video-link" href="#" target="_blank" rel="noopener" data-youtube-pending>
+        <div class="video-thumb">
+          <div class="play-btn"></div>
+          <span class="ph-label" style="position:absolute;bottom:44px;">Spela på YouTube: Nunca es Suficiente — Gröna Lund</span>
+        </div>
+        </a>
+        <div class="video-meta">
+          <div class="t">Nunca es Suficiente</div>
+          <div class="d">Gröna Lund · Video från sommaren 2026</div>
+        </div>
+      </div>
+    </div>
+    <p style="font-family: system-ui, sans-serif; font-size: 12px; color: rgba(203,179,145,0.6); margin-top: 14px;">
+      * Videokortet "Nunca es Suficiente" väntar på YouTube-länk — lägg till länken (eller mejla den) när videon är uppladdad, och kopiera in den i koden där <a href="#" data-youtube-pending> står.
+    </p>
+  </div>
+</section>
+
+<section id="foton" class="alt-bg">
+  <div class="maxw">
+    <div class="sec-kicker">I bild</div>
+    <h2>Foton från <em>sommaren</em></h2>
+    <div class="gallery">
+      <div class="ph ph-1">
+        <span class="ph-label">Huvudfoto — Karen Pérez Guzmán</span>
+        <span class="credit">© Karen Pérez Guzmán</span>
+      </div>
+      <div class="gallery-side">
+        <div class="ph ph-2">
+          <span class="ph-label">Gröna Lund — psp.gallery</span>
+          <span class="credit">© psp.gallery</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="om-oss">
+  <div class="maxw">
+    <div class="sec-kicker">Om oss</div>
+    <h2>Tradition med <em>svensk förankring</em></h2>
+    <div class="bio">
+      <div>
+        <p>Mariachi Fiesta México grundades i Stockholm av musiker med rötter i Mexiko och en gemensam kärlek till den mexikanska musiktraditionen. Vi spelar klassisk mariachi — sones, boleros och rancheras — med den värme och energi som genren kräver.</p>
+        <p>Vi har uppträtt på kulturscener, festivaler och privatevent — i Sverige och utomlands: från Etnografiska museets sommarscen och Kungsträdgården till Gröna Lunds stora scen, Riksscenen i Oslo och teater Degollado, Guadalajara, México. Repertoaren sträcker sig från tidlösa standardverk som <i>El Rey</i> och <i>Cielito Lindo</i> till modernafavoriter som <i>México en la Piel</i>, <i>Canción del Mariachi</i> och <i>Nunca es Suficiente</i>.</p>
+        <div class="quote">"Att ta en äkta känsla av Mexiko, dess musik och passion till en scen nära dej."</div>
+        <p><b>Boka oss</b> till bröllop, födelsedagar, företagsevent, festivaler och allt däremellan — hela bandet på scen.</p>
+      </div>
+      <div class="bio-facts">
+        <div class="fact"><div class="n">8+</div><div class="l">musiker — violiner, trumpeter, vihuela, guitarrón & gitarr</div></div>
+        <div class="fact"><div class="n">130+</div><div class="l">låtar i repertoaren</div></div>
+        <div class="fact"><div class="n">2002</div><div class="l">grundat i Stockholm</div></div>
+        <div class="fact"><div class="n">SV · EN · ES</div><div class="l">vi pratar med gästerna på deras språk</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="boka" class="alt-bg">
+  <div class="maxw book">
+    <div class="sec-kicker">Boka oss</div>
+    <h2>Redo för <em>ert event?</em></h2>
+    <div class="book-box">
+      <h3>Snabbt, enkelt och säkert</h3>
+      <p>Skicka en förfrågan — vi återkommer med bekräftelse, tillgänglighet och detaljer.</p>
+      <div class="chips">
+        <span class="chip">💒 Bröllop</span>
+        <span class="chip">🎉 Företagsevent</span>
+        <span class="chip">🎂 Födelsedagar</span>
+        <span class="chip">🎪 Festivaler</span>
+        <span class="chip">🎭 Kulturarrangemang</span>
+      </div>
+      <a class="btn btn-primary" href="mailto:info@mariachi.se">📩 Skicka bokningsförfrågan</a>
+      <div class="gdpr-note">🔒 Era uppgifter (namn, e-post och telefon) behandlas GDPR-säkert och används endast för att planera ert event. Vi delar aldrig dina uppgifter med tredje part.</div>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="maxw foot">
+    <div class="brand">
+      <div class="brand-mark">M</div>
+      <div class="brand-name">MARIACHI <b>Fiesta México</b></div>
+    </div>
+    <div class="socials">
+      <div class="social" title="Facebook">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.3V11H8.5v3h2.8v7h2.2z"/></svg>
+      </div>
+      <div class="social" title="Instagram">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
+      </div>
+      <div class="social" title="YouTube">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8c1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15.2V8.8l5.2 3.2L10 15.2z"/></svg>
+      </div>
+    </div>
+    <div class="foot-meta">
+      <div class="hash">#mariachisueco</div>
+      <div>© 2026 Fiesta México · Fotografi: Karen Pérez Guzmán</div>
+    </div>
+  </div>
+</footer>
+
+<script>
+  // Klickbar navigation fungerar även i canvas-preview (iframe utan URL-hash):
+  document.querySelectorAll('a[href^="#"]').forEach(function (a) {
+    a.addEventListener("click", function (e) {
+      var id = a.getAttribute("href").slice(1);
+      var target = id ? document.getElementById(id) : null;
+      if (target) {
+        e.preventDefault();
+        target.scrollIntoView({ behavior: "smooth" });
+      }
+    });
+  });
+  document.querySelectorAll(".social").forEach(function (s) {
+    s.title = "Placeholder — riktig länk läggs in vid publicering";
+  });
+
+  // === Kommande spelningar: hämtas från Group Planner-feeden (gigs.json) ===
+  // Feed: JSON-array med { datum, starttid, sluttid, titel, plats, beskrivning, url }
+  // Fallback-listan ovan visas tills feeden finns / om hämtningen misslyckas.
+  (function loadGigs() {
+    var list = document.getElementById("gig-list");
+    var fallback = document.getElementById("gig-list-fallback");
+    var note = document.getElementById("gig-note");
+    var months = ["JAN","FEB","MAR","APR","MAJ","JUN","JUL","AUG","SEP","OKT","NOV","DEC"];
+    function esc(s) {
+      return String(s).replace(/[&<>"']/g, function (c) {
+        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
+      });
+    }
+    function render(gigs) {
+      gigs.sort(function (a, b) { return (a.datum || "").localeCompare(b.datum || ""); });
+      var html = "";
+      gigs.forEach(function (g) {
+        var d = new Date(g.datum + "T00:00:00");
+        if (isNaN(d)) return;
+        var day = d.getDate();
+        var mon = months[d.getMonth()] || "";
+        var time = (g.starttid ? "kl " + g.starttid + (g.sluttid ? "–" + g.sluttid : "") : "");
+        var desc = [g.plats, time, g.beskrivning].filter(Boolean).map(esc).join(" · ");
+        var title = g.url
+          ? '<a href="' + esc(g.url) + '" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(224,168,60,0.5);">' + esc(g.titel) + "</a>"
+          : esc(g.titel);
+        html += '<div class="gig">' +
+                  '<div class="gig-date"><b>' + day + '</b><span>' + mon + '</span></div>' +
+                  '<div class="gig-info"><div class="t">' + title + '</div>' +
+                  '<div class="d">' + desc + '</div></div>' +
+                '</div>';
+      });
+      if (!html) { note.style.display = "none"; return; } // tom feed → behåll fallback
+      list.innerHTML = html +
+        '<div class="gig-empty">Fler publika spelningar publiceras löpande — <a href="#boka">boka oss till ditt event</a>!</div>';
+      fallback.style.display = "none";
+      list.style.display = "";
+      note.style.display = "";
+    }
+    fetch("gigs.json")
+      .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
+      .then(render)
+      .catch(function () { /* feeden ej på plats ännu → fallback visas */ });
+  })();
+</script>
+
+</body>
+</html>
