@@ -8,7 +8,7 @@ Engsidig hemsida (HTML/CSS/JS, inga ramverk) publicerad via **GitHub Pages**.
 |---|---|
 | `index.html` | Hela hemsidan (HTML, CSS och JS i en fil) |
 | `Hero.jpg`, `Logo_Transparent.png`, `grona-lund2.jpg`, `Gallery Photo-3.jpg` m.fl. | Bilder som används på sidan |
-| `gigs.json` | *(Valfri)* spelningsfeed — se "Spelningar" nedan |
+| `gigs.json` | Spelningsfeed — se "Spelningslistan" nedan |
 
 ## Publicera ändringar
 
@@ -22,18 +22,62 @@ Sidan har tre språk (SV/EN/ES) med flaggknappar uppe till höger. All text finn
 
 ## Spelningslistan (gigs.json)
 
-Sektionen "Kommande spelningar" visar först en hårdkodad fallback-spelning. Om en fil `gigs.json` finns i repot hämtas listan automatiskt därifrån istället (små bokningar/tillfälligheter kan läggas dit utan att röra HTML-koden). Format:
+Sektionen "Kommande spelningar" visar först en hårdkodad fallback-spelning. Om filen `gigs.json` finns i repot hämtas listan automatiskt därifrån istället — nya spelningar läggs till i filen utan att röra HTML-koden.
+
+**Fält (svenska fältnamn!):**
+
+| Fält | Obligatoriskt | Beskrivning |
+|---|---|---|
+| `datum` | ✅ | ÅÅÅÅ-MM-DD (styr sorteringen och datumrutan) |
+| `titel` | ✅ | Spelningens namn (kan länkas med `url`) |
+| `plats` | ✅ | Plats/lokal |
+| `starttid` | – | `"11:00"` |
+| `sluttid` | – | `"17:00"` |
+| `beskrivning` | – | Kort info, visas efter plats/tid |
+| `url` | – | Länk (t.ex. event-sida) — titeln blir klickbar |
+
+**Exempel — en spelning:**
 
 ```json
 [
   {
-    "date": "2026-10-31",
-    "title": "Fiesta en el cementerio — Fest på kyrkogården",
-    "place": "Etnografiska museet",
-    "time": "kl 11:00–17:00"
+    "datum": "2026-10-31",
+    "titel": "Fiesta en el cementerio — Fest på kyrkogården",
+    "plats": "Etnografiska museet",
+    "starttid": "11:00",
+    "sluttid": "17:00",
+    "beskrivning": "Día de Muertos med folkdans, mariachi & marknad"
   }
 ]
 ```
+
+**Flera spelningar:** lägg till fler objekt i samma lista — skilj dem med komma. Sorteringen sköter sig själv (tidigaste datumet först). Spelningar som passerats tas bara bort ur filen.
+
+```json
+[
+  {
+    "datum": "2026-10-31",
+    "titel": "Fiesta en el cementerio",
+    "plats": "Etnografiska museet",
+    "starttid": "11:00"
+  },
+  {
+    "datum": "2026-12-12",
+    "titel": "Julbord med mariachi",
+    "plats": "Stockholm",
+    "starttid": "18:00",
+    "url": "https://exempel.se/julbord"
+  }
+]
+```
+
+**Viktigt:**
+
+- Filen måste vara giltig JSON: **komma mellan** objekten, men **inget komma** efter det sista
+- Datumformatet `ÅÅÅÅ-MM-DD` (fyrsiffrigt år, nollförskriven månad) krävs för att sorteringen ska fungera
+- Redigera enklast direkt på GitHub: klicka på `gigs.json` → pennan → ändra → **Commit changes**
+- Tänk på att varje `"` ska vara vanliga raka citattecken — kopiera inte från Word som kan ge "typografiska" citattecken
+- Om filen saknas eller hämtningen misslyckas visas fallback-spelningen igen
 
 ## Besöksstatistik — GoatCounter (INTE aktiverad ännu)
 
