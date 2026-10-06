@@ -1,27 +1,60 @@
-# mariachi.se — hemsida (designutkast)
+# Mariachi Fiesta México — hemsida
 
-Så här publicerar du på ditt personliga GitHub-konto (flyttas till bandkontot senare):
+Engsidig hemsida (HTML/CSS/JS, inga ramverk) publicerad via **GitHub Pages**.
 
-## Steg för steg — GitHub Pages
+## Filer
 
-1. Gå till **github.com/new** (du är redan inloggad)
-2. Repository name: **mariachi** (eller vad du vill) — välj **Public**, klicka "Create repository"
-3. På den nya repots sida: klicka **"uploading an existing file"**-länken
-4. Dra in **index.html** (och README.md) från den här mappen, klicka **"Commit changes"**
-5. Gå till repots **Settings → Pages**
-6. Under "Build and deployment": Source = **Deploy from a branch**, Branch = **main** /(root), klicka Save
-7. Vänta 1–2 minuter — sidan blir live på:
-   **https://DIN-ANVÄNDARNAMN.github.io/mariachi/**
+| Fil | Beskrivning |
+|---|---|
+| `index.html` | Hela hemsidan (HTML, CSS och JS i en fil) |
+| `Hero.jpg`, `Logo_Transparent.png`, `grona-lund2.jpg`, `Gallery Photo-3.jpg` m.fl. | Bilder som används på sidan |
+| `gigs.json` | *(Valfri)* spelningsfeed — se "Spelningar" nedan |
 
-## När bandet ska ta över (flytt till bandkontot)
+## Publicera ändringar
 
-GitHub har inbyggd transfer: **Settings → General → Danger Zone → Transfer ownership** — ange bandets kontonamn. Repot behåller historik, stars och GitHub Pages-adressen byts till bandets (`bandkonto.github.io/mariachi`). Ingen kod behöver ändras.
+1. Gå till repot på GitHub → **Add file → Upload files**
+2. Dra in `index.html` (och eventuellt ändrade bilder)
+3. **Commit changes** → live på GitHub Pages inom 1–2 minuter
 
-Senare kan ni koppa egen domän (mariachi.se) till samma repo: Settings → Pages → Custom domain.
+## Språk
 
-## Att lägga till senare (markerat i koden)
+Sidan har tre språk (SV/EN/ES) med flaggknappar uppe till höger. All text finns i `i18n`-objektet i `<script>`-delen av `index.html` — ändra texten i alla tre språkblocken (sv/en/es) när något uppdateras.
 
-- Riktig logga: byt text-logotypen i headern mot `<img src="Logo_Transparent.png" ...>` (kommentar i koden visar raden)
-- Foton: Karen Pérez Guzmán + psp.gallery (ersätter platshållarna)
-- YouTube-länk för "Nunca es Suficiente"-kortet
-- gigs.json-feed från Group Planner (kravspec till Thomas/Resultit)
+## Spelningslistan (gigs.json)
+
+Sektionen "Kommande spelningar" visar först en hårdkodad fallback-spelning. Om en fil `gigs.json` finns i repot hämtas listan automatiskt därifrån istället (små bokningar/tillfälligheter kan läggas dit utan att röra HTML-koden). Format:
+
+```json
+[
+  {
+    "date": "2026-10-31",
+    "title": "Fiesta en el cementerio — Fest på kyrkogården",
+    "place": "Etnografiska museet",
+    "time": "kl 11:00–17:00"
+  }
+]
+```
+
+## Besöksstatistik — GoatCounter (INTE aktiverad ännu)
+
+Längst ner i `index.html` ligger ett förberett skript för [GoatCounter](https://goatcounter.com) — en cookie-fri, GDPR-vänlig besöksräknare (öppen källkod, gratis för icke-kommersiell användning).
+
+**Status:** platshallaren `ERAT-KOD` är ännu inte utbytt → inget räknas, sidan påverkas inte.
+
+**Aktivera (när band-accesserna är klara):**
+
+1. Skapa gratiskonto på goatcounter.com → välj en kod, t.ex. `mariachifiesta`
+2. I `index.html`, ersätt `ERAT-KOD` i denna rad med er kod:
+   ```html
+   <script data-goatcounter="https://ERAT-KOD.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+   ```
+3. Commit → räknaren börjar räkna vid nästa sidvisning
+4. Statistik visas på `dinkod.goatcounter.com` (kan göras publik i inställningarna, men beslutat: **ingen publik länk på hemsidan tills vidare**)
+
+## GDPR / personuppgifter
+
+Bokningsformuläret skickar namn/e-post/telefon till bandets e-post. Texten i formuläret anger att uppgifterna endast används för att planera bokningen, inte delas med tredje part och inte används för marknadsföring. Ingen cookie-banner krävs (inga cookies, ingen tracking) — GoatCounter använder ingen persondata.
+
+## Bilder & rättigheter
+
+Foto: © Karen Pérez Guzmán, © Nina m.fl. — ange fotograf vid nya bilder i videokortens underrubriker.
