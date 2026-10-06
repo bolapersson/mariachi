@@ -162,6 +162,7 @@
     background: rgba(26,15,10,0.8); color: var(--gold-bright);
     padding: 4px 10px; border-radius: 14px; border: 1px solid rgba(224,168,60,0.4);
   }
+  img { max-width: 100%; }
   .video-thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.9; }
   .video-thumb .play-btn { position: relative; z-index: 2; }
   .video-thumb .ph-label, .video-thumb .tag { z-index: 3; }
@@ -384,12 +385,12 @@
     <div class="sec-kicker" data-i18n="photos-kicker">I bild</div>
     <h2 data-i18n="photos-h2">Foton från <em>sommaren</em></h2>
     <div class="gallery" style="display:flex;flex-wrap:wrap;gap:16px;justify-content:center;align-items:stretch;">
-      <div class="ph" style="min-height:540px;background:#241410;flex:1 1 480px;">
-        <img src="grona-lund.jpg" alt="På scen på Gröna Lund" style="position:absolute;inset:0;width:100%;height:100%;object-fit:cover;" />
+      <div class="ph" style="position:relative;flex:1 1 320px;min-width:0;overflow:hidden;border-radius:14px;background:#241410;">
+        <img src="grona-lund.jpg" alt="På scen på Gröna Lund" style="width:100%;height:100%;min-height:280px;object-fit:cover;display:block;" />
         <span class="credit">© psp.gallery</span>
       </div>
-      <div class="ph" style="min-height:540px;background:#241410;flex:0 0 auto;">
-        <img src="grona-lund2.jpg" alt="Sångerska på scen på Gröna Lund" style="width:auto;height:540px;max-width:100%;object-fit:contain;display:block;" />
+      <div class="ph" style="position:relative;flex:1 1 320px;min-width:0;overflow:hidden;border-radius:14px;background:#241410;">
+        <img src="grona-lund2.jpg" alt="Sångerska på scen på Gröna Lund" style="width:100%;height:100%;min-height:280px;object-fit:cover;display:block;" />
         <span class="credit">© psp.gallery</span>
       </div>
     </div>
@@ -618,6 +619,6 @@
      t.ex. src="//mariachifiestamexico.goatcounter.com/count" -->
 <script data-goatcounter="https://ERAT-KOD.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" nonce="v8fIO5w3UKTHNTdQmC/ljw==" data-cf-beacon='{"version":"2024.11.0","token":"36b4216ae2dc4d5488c249161e71fe1e","spa":2}' crossorigin="anonymous"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" nonce="hS5tkj3QbtN470uDk0Xeyg==" data-cf-beacon='{"version":"2024.11.0","token":"36b4216ae2dc4d5488c249161e71fe1e","spa":2}' crossorigin="anonymous"></script>
 </body>
 </html>
