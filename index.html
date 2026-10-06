@@ -328,9 +328,7 @@
     <!-- Renderas från gigs.json (Group Planner-API) när feeden finns -->
     <div class="gig-list" id="gig-list" style="display:none;"></div>
 
-    <p id="gig-note" data-i18n="gig-note" style="display:none; font-family: system-ui, sans-serif; font-size:11px; color: rgba(203,179,145,0.5); margin-top:10px;">
-      Spelningslistan hämtas automatiskt från bandets bokningssystem.
-    </p>
+    <p id="gig-note" data-i18n="gig-note" style="display:none;"></p>
   </div>
 </section>
 
@@ -493,7 +491,7 @@
       "gig-t": "Fiesta en el cementerio — A party at the cemetery", "gig-month": "OCT",
       "gig-d": "The Museum of Ethnography · 11:00–17:00 · Día de Muertos with folk dance, mariachi &amp; market",
       "gig-empty": "More public gigs are published regularly — <a href=\"#boka\">book us for your event</a>!",
-      "gig-note": "The gig list is fetched automatically from the band's booking system.",
+      "gig-note": "",
       "videos-kicker": "A taste of us", "videos-h2": "Video from <em>2026 performances</em>",
       "v1-d": "Kungsträdgården / The Museum of Ethnography · © Karen Pérez Guzmán",
       "v2-d": "Kungsträdgården / The Museum of Ethnography · © Karen Pérez Guzmán",
@@ -526,7 +524,7 @@
       "gig-t": "Fiesta en el cementerio", "gig-month": "OCT",
       "gig-d": "Museo Etnográfico · 11:00–17:00 · Día de Muertos con danza folclórica, mariachi y mercado",
       "gig-empty": "Se publican más conciertos públicos continuamente — <a href=\"#boka\">contrátanos para tu evento</a>!",
-      "gig-note": "La lista de conciertos se obtiene automáticamente del sistema de reservas de la banda.",
+      "gig-note": "",
       "videos-kicker": "Unas muestras", "videos-h2": "Vídeo de <em>actuaciones 2026</em>",
       "v1-d": "Kungsträdgården / Museo Etnográfico · © Karen Pérez Guzmán",
       "v2-d": "Kungsträdgården / Museo Etnográfico · © Karen Pérez Guzmán",
@@ -608,7 +606,7 @@
       list.style.display = "";
       note.style.display = "";
     }
-    fetch("gigs.json")
+    fetch("gigs.json?t=" + Date.now())
       .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
       .then(render)
       .catch(function () { /* feeden ej på plats ännu → fallback visas */ });
@@ -620,6 +618,6 @@
      t.ex. src="//mariachifiestamexico.goatcounter.com/count" -->
 <script data-goatcounter="https://ERAT-KOD.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" nonce="tGoZPW6S8aieHT1USMYmpQ==" data-cf-beacon='{"version":"2024.11.0","token":"36b4216ae2dc4d5488c249161e71fe1e","spa":2}' crossorigin="anonymous"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" nonce="v8fIO5w3UKTHNTdQmC/ljw==" data-cf-beacon='{"version":"2024.11.0","token":"36b4216ae2dc4d5488c249161e71fe1e","spa":2}' crossorigin="anonymous"></script>
 </body>
 </html>
