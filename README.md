@@ -1,6 +1,6 @@
 # Mariachi Fiesta México — hemsida
 
-Engsidig hemsida (HTML/CSS/JS, inga ramverk) publicerad via **GitHub Pages**.
+Ensidig hemsida (HTML/CSS/JS, inga ramverk) publicerad via **GitHub Pages**.
 
 ## Filer
 
