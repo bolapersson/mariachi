@@ -199,6 +199,19 @@
     font-style: italic; color: var(--muted); margin: 22px 0;
   }
   .bio-facts { display: grid; gap: 12px; }
+  .member-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 22px; margin-top: 26px; }
+  .member-card {
+    border: 1px solid rgba(224,168,60,0.25); border-radius: 14px; padding: 16px;
+    background: rgba(36,20,16,0.35);
+    display: flex; flex-direction: column; gap: 6px;
+    transition: border-color 0.2s ease;
+  }
+  .member-card:hover { border-color: rgba(224,168,60,0.6); }
+  .member-photo { border-radius: 10px; overflow: hidden; aspect-ratio: 3 / 4; background: linear-gradient(150deg, #7a2d14, #3a1a0e); }
+  .member-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
+  .member-name { font-family: var(--serif); font-size: 22px; color: #fff; margin-top: 10px; }
+  .member-role { font-family: system-ui, sans-serif; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); }
+  .member-bio { font-family: system-ui, sans-serif; font-size: 14px; line-height: 1.55; color: rgba(247,234,213,0.82); }
   .fact { background: var(--panel); border-radius: 10px; padding: 16px 18px; border: 1px solid rgba(224,168,60,0.15); }
   .fact .n { font-size: 26px; color: var(--gold-bright); }
   .fact .l { font-family: system-ui, sans-serif; font-size: 12.5px; color: var(--muted); }
@@ -416,6 +429,22 @@
         <div class="fact"><div class="n">SV · EN · ES</div><div class="l" data-i18n="fact-4">vi pratar med gästerna på deras språk</div></div>
       </div>
     </div>
+
+    <div class="sec-kicker" data-i18n="band-kicker" style="margin-top:56px;">Möt bandet</div>
+    <h2 data-i18n="band-h2">Musikerna <em>bakom musiken</em></h2>
+    <div class="member-grid">
+      <!-- Ola Persson — exempelkort. Kopiera blocket för varje medlem:
+           byt foto (src), namn, instrument och text. Foton: Karens porträtt. -->
+      <div class="member-card">
+        <div class="member-photo">
+          <img src="member-ola.jpg" alt="Ola Persson — trumpet och sång" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'member-ph',style:'aspect-ratio:3/4;background:linear-gradient(150deg,#7a2d14,#3a1a0e);'}));" />
+        </div>
+        <div class="member-name">Ola Persson</div>
+        <div class="member-role" data-i18n="m-ola-role">Trumpet &amp; sång</div>
+        <p class="member-bio" data-i18n="m-ola-bio">Skolad i kulturskolans trumpetklass och hos erfarna sångpedagoger. Har spelat i kommunal musikkår och sjungit i motettkörer och Filharmoniska kören. Med i Mariachi Fiesta México sedan nästan början.</p>
+      </div>
+      <!-- Lägg till fler medlemmar här — kopiera member-card-blocket ovan -->
+    </div>
   </div>
 </section>
 
@@ -500,6 +529,9 @@
       "v3-d": "Gröna Lund · © Nina",
       "photos-kicker": "In pictures", "photos-h2": "Photos from <em>the summer</em>",
       "about-kicker": "About us", "about-h2": "True to <em>Mexican tradition</em>",
+      "band-kicker": "Meet the band", "band-h2": "The musicians <em>behind the music</em>",
+      "m-ola-role": "Trumpet & vocals",
+      "m-ola-bio": "Trained in the municipal music school and with experienced vocal coaches. Has played in a community wind band and sung in motet choirs and the Philharmonic Choir. With Mariachi Fiesta México almost from the start.",
       "bio-p1": "Mariachi Fiesta México was founded in Stockholm by musicians with ties to Mexico and a shared love of the Mexican music tradition. Leading the band is our musical director <b>Alejandro Becerra</b>, with roots in <b>Guadalajara — the cradle of mariachi</b>. We play classic mariachi — sones, boleros and rancheras — with the warmth and energy the genre demands.",
       "bio-p2": "We have performed on cultural stages, festivals and private events — in Sweden and abroad: from the Museum of Ethnography's summer stage and Kungsträdgården to Gröna Lund's main stage, Riksscenen in Oslo and Teatro Degollado, Guadalajara, México. The repertoire ranges from classics like <i>El Rey</i> and <i>Cielito Lindo</i> to modern favorites like <i>México en la Piel</i>, <i>Canción del Mariachi</i> and <i>Nunca es Suficiente</i>.",
       "quote": "\"To bring a true feeling of Mexico — its music and passion — to a stage near you.\"",
@@ -533,6 +565,9 @@
       "v3-d": "Gröna Lund · © Nina",
       "photos-kicker": "En imágenes", "photos-h2": "Fotos del <em>verano</em>",
       "about-kicker": "Nosotros", "about-h2": "Fieles a la <em>tradición mexicana</em>",
+      "band-kicker": "Conoce a la banda", "band-h2": "Los músicos <em>detrás de la música</em>",
+      "m-ola-role": "Trumpeta y voz",
+      "m-ola-bio": "Formado en la escuela municipal de música y con pedagogos de canto experimentados. Ha tocado en una banda musical municipal y cantado en coros de motetes y el Coro Filarmónico. Con Mariachi Fiesta México casi desde el principio.",
       "bio-p1": "Mariachi Fiesta México fue fundado en Estocolmo por músicos con vínculos con México y un amor compartido por la tradición musical mexicana. Al frente está nuestro director musical <b>Alejandro Becerra</b>, con raíces en <b>Guadalajara, la cuna del mariachi</b>. Tocamos mariachi clásico — sones, boleros y rancheras — con el calor y la energía que el género exige.",
       "bio-p2": "Hemos actuado en escenarios culturales, festivales y eventos privados — en Suecia y en el extranjero: desde el escenario de verano del Museo Etnográfico y Kungsträdgården hasta el gran escenario de Gröna Lund, Riksscenen en Oslo y el Teatro Degollado, Guadalajara, México. El repertorio abarca desde clásicos como <i>El Rey</i> y <i>Cielito Lindo</i> hasta favoritos modernos como <i>México en la Piel</i>, <i>Canción del Mariachi</i> y <i>Nunca es Suficiente</i>.",
       "quote": "\"Llevar un sentimiento auténtico de México — su música y su pasión — a un escenario cerca de ti.\"",
@@ -620,6 +655,6 @@
      t.ex. src="//mariachifiestamexico.goatcounter.com/count" -->
 <script data-goatcounter="https://ERAT-KOD.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" nonce="qsO9Km+6XW3dULT1KnoCnw==" data-cf-beacon='{"version":"2024.11.0","token":"36b4216ae2dc4d5488c249161e71fe1e","spa":2}' crossorigin="anonymous"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" nonce="BPU7EU9H3DqTRHsgqIMziA==" data-cf-beacon='{"version":"2024.11.0","token":"36b4216ae2dc4d5488c249161e71fe1e","spa":2}' crossorigin="anonymous"></script>
 </body>
 </html>
