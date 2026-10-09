@@ -186,6 +186,8 @@
 
     <div class="sec-kicker" data-i18n="band-kicker" style="margin-top:56px;">Möt bandet</div>
     <h2 data-i18n="band-h2">Musikerna <em>bakom musiken</em></h2>
+    <a class="btn btn-primary" href="#medlemsgalleri" id="band-cta" data-i18n="band-cta" data-i18n-sv="Möt musikerna →" style="margin-top:8px;">Möt musikerna →</a>
+    <div id="medlemsgalleri" style="display:none;">
     <div class="member-grid">
       <a class="member-card" href="medlem.html?n=alejandro" style="text-decoration:none;color:inherit;display:flex;">
         <div class="member-photo">
@@ -311,6 +313,8 @@
       
     <!-- Fler medlemmar läggs här när foton kommer -->
   </div>
+    </div>
+  </div>
 </section>
 
 <section id="boka" class="alt-bg">
@@ -370,12 +374,27 @@
     });
   });
 </script>
+<script>
+  (function () {
+    var btn = document.getElementById("band-cta");
+    var g = document.getElementById("medlemsgalleri");
+    if (!btn || !g) return;
+    var sv = btn.getAttribute("data-i18n-sv");
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      var open = g.style.display !== "none";
+      g.style.display = open ? "none" : "";
+      if (open) { btn.textContent = sv; }
+      else { btn.textContent = "✕ Stäng"; g.scrollIntoView({ behavior: "smooth", block: "start" }); }
+    });
+  })();
+</script>
 <script src="i18n.js"></script>
 <script src="gigs.js"></script>
 
 <script data-goatcounter="https://ERAT-KOD.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" nonce="9mpYMdLOVFlLBOimoKtqaw==" data-cf-beacon='{"version":"2024.11.0","token":"36b4216ae2dc4d5488c249161e71fe1e","spa":2}' crossorigin="anonymous"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" nonce="zg1vYL3v8MtD7MCHwJkihg==" data-cf-beacon='{"version":"2024.11.0","token":"36b4216ae2dc4d5488c249161e71fe1e","spa":2}' crossorigin="anonymous"></script>
 </body>
 </html>
 
