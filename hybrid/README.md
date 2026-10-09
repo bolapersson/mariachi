@@ -1,14 +1,13 @@
 # Hybrida versionen — en sida + EN gemensam medlemsida
 
 Struktur (endast två HTML-filer):
-- index.html — hela sajten på en sida: hero, spelningar, videos, foton, om oss (kompakta medlemskort), boka
-- medlem.html — EN sida för alla tolv musiker; vem som visas styrs av länken: medlem.html?n=sebastian
-- members.js — all medlemsdata (namn, roll, bio, foto) samlad på ett ställe
+- index.html — hela sajten på en sida, medlemsrutnaget är IDENTISKT med en-sidans layout (fulla kort med bios); hela kortet är klickbart
+- medlem.html — visar medlemmens kort i exakt samma stil/storlek som i rutnaget + länk "← Alla medlemmar" tillbaka till galleriet
+- members.js — kortens innehåll samlade (redigera medlemmar här)
 - style.css, i18n.js, gigs.js — delade filer
 
 Underhåll:
-- Ny medlem: (1) lägg till i members.js, (2) lägg ett kompakt kort i index.html, (3) översättningsnycklar m-<namn>-role/bio i i18n.js
-- Byta bio/foto/roll: ändra bara i members.js
+- Medlemsändring: ändra i members.js (och motsvarande kort i index.html)
 - Spelningar: gigs.json laddas automatiskt på index
 
 Bilder/media som måste ligga i samma mapp som HTML-filerna:
@@ -17,4 +16,4 @@ Bilder/media som måste ligga i samma mapp som HTML-filerna:
 - grona-lund.jpg, grona-lund2.jpg
 - gigs.json (valfritt — automatisk spelningsfeed; annars visas fallbacken)
 
-Publicering: lägg mappens innehåll i repot (t.ex. under /hybrid) — mappens namn ger versionen sin egen URL.
+Publicering: mappens innehåll i repot — mappens namn blir URL:en.

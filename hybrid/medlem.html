@@ -6,9 +6,6 @@
 <title>Mariachi Fiesta México</title>
 <meta name="description" content="Mariachi Fiesta México — Stockholms mariachiband." />
 <link rel="stylesheet" href="style.css" />
-<style>
-  @media (max-width: 720px) { .maxw[style*="grid-template-columns"] { grid-template-columns: 1fr !important; } }
-</style>
 </head>
 <body>
 
@@ -56,15 +53,12 @@
 
 
 <main>
-<section style="padding:56px 0 48px;">
-  <div class="maxw" style="display:grid;grid-template-columns:minmax(220px,300px) 1fr;gap:44px;align-items:start;">
-    <div id="m-photo"></div>
-    <div>
-      <h1 class="member-name" id="m-name" style="font-size:36px;margin:0 0 6px;"></h1>
-      <div class="member-role" id="m-role"></div>
-      <p class="member-bio" id="m-bio" style="margin-top:16px;max-width:640px;"></p>
-      <a href="index.html#om-oss" style="display:inline-block;margin-top:22px;font-family:system-ui,sans-serif;font-size:14px;color:var(--gold-bright);text-decoration:none;border-bottom:1px solid rgba(224,168,60,0.5);">← <span data-i18n="member-back">Alla medlemmar</span></a>
+<section style="padding:48px 0 56px;">
+  <div class="maxw" style="display:flex;flex-direction:column;align-items:center;gap:28px;">
+    <div class="member-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));max-width:520px;width:100%;">
+      <div class="member-card" id="m-card"></div>
     </div>
+    <a href="index.html#om-oss" style="display:inline-block;font-family:system-ui,sans-serif;font-size:14px;color:var(--gold-bright);text-decoration:none;border-bottom:1px solid rgba(224,168,60,0.5);">← <span data-i18n="member-back" data-i18n-sv="Alla medlemmar">Alla medlemmar</span></a>
   </div>
 </section>
 </main>
@@ -102,25 +96,15 @@
   var slug = new URLSearchParams(location.search).get("n") || "";
   var m = window.MEMBERS && MEMBERS[slug];
   if (!m) { location.replace("index.html#om-oss"); return; }
-  document.getElementById("m-photo").innerHTML = m.photo;
-  document.getElementById("m-name").textContent = m.name;
-  var role = document.getElementById("m-role");
-  role.setAttribute("data-i18n", "m-" + slug + "-role");
-  role.setAttribute("data-i18n-sv", m.role);
-  role.innerHTML = m.role;
-  var bio = document.getElementById("m-bio");
-  bio.setAttribute("data-i18n", "m-" + slug + "-bio");
-  bio.setAttribute("data-i18n-sv", m.bio);
-  bio.innerHTML = m.bio;
+  document.getElementById("m-card").innerHTML = m.card;
   document.title = m.name + " — Mariachi Fiesta México";
-  var md = document.querySelector('meta[name="description"]');
-  if (md) md.setAttribute("content", m.name + ", " + m.role.replace(/&amp;/g, "&") + " i Mariachi Fiesta México — Stockholms mariachiband.");
 })();
 </script>
 <script src="i18n.js"></script>
 
 <script data-goatcounter="https://ERAT-KOD.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" nonce="HOokHjYflWOHZSH4Sk7c1g==" data-cf-beacon='{"version":"2024.11.0","token":"36b4216ae2dc4d5488c249161e71fe1e","spa":2}' crossorigin="anonymous"></script>
 </body>
 </html>
 
