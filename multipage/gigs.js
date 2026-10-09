@@ -46,4 +46,3 @@
       .then(render)
       .catch(function () { /* feeden ej på plats ännu → fallback visas */ });
   })();
-

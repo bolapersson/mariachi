@@ -4,6 +4,7 @@
       "hero-kicker": "Authentic Mexican Music · In Sweden",
       "hero-sub": "Warmth, energy and tradition — from Mexico, in Sweden",
       "teaser-kicker": "Welcome in", "teaser-h2": "What would you <em>like to see</em>?", "member-back": "All members",
+      "teaser-gigs": "See when we play next — and get tickets", "teaser-videos": "Watch us on film from this summer\u2019s gigs", "teaser-photos": "Photos from Gröna Lund and other stages", "teaser-about": "Meet the twelve musicians of the band", "teaser-book": "Get in touch for weddings, parties and events",
       "btn-book": "Book us for your event", "btn-videos": "Watch our videos ↓",
       "gigs-kicker": "Upcoming gigs", "gigs-h2": "Next time you can <em>see us live</em>",
       "gig-t": "Fiesta en el cementerio — A party at the cemetery", "gig-month": "OCT",
@@ -11,7 +12,7 @@
       "gig-d": "The Museum of Ethnography · 11:00–17:00 · Día de Muertos with folk dance, mariachi &amp; market",
       "gig-empty": "More public gigs are published regularly — <a href=\"boka.html\">book us for your event</a>!",
       "gig-note": "",
-      "videos-kicker": "A taste of us", "videos-h2": "Video from <em>2026 performances</em>",
+      "videos-kicker": "Conciertos anteriores", "videos-h2": "Video from <em>2026 performances</em>",
       "v1-d": "Kungsträdgården / The Museum of Ethnography · © <a href=\"https://www.1-way-ticket.com/clients\" target=\"_blank\" rel=\"noopener\" style=\"color:inherit;border-bottom:1px solid rgba(224,168,60,0.5);text-decoration:none;\">Karen Pérez Guzmán</a>",
       "v2-d": "Kungsträdgården / The Museum of Ethnography · © <a href=\"https://www.1-way-ticket.com/clients\" target=\"_blank\" rel=\"noopener\" style=\"color:inherit;border-bottom:1px solid rgba(224,168,60,0.5);text-decoration:none;\">Karen Pérez Guzmán</a>",
       "v3-d": "Gröna Lund · © Nina",
@@ -149,4 +150,3 @@
     s.addEventListener("click", function () { setLang(s.getAttribute("data-lang") || "sv"); });
   });
   restoreLang();
-

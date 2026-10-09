@@ -3,8 +3,8 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Mariachi Fiesta México — Äkta mexikansk musik i Sverige</title>
-<meta name="description" content="Mariachi Fiesta México — Stockholms mariachiband. Boka oss till bröllop, event och fest." />
+<title>Mariachi Fiesta México</title>
+<meta name="description" content="Mariachi Fiesta México — Stockholms mariachiband." />
 <link rel="stylesheet" href="style.css" />
 </head>
 <body>
@@ -52,51 +52,16 @@
 
 
 
-<header class="hero">
-  <div class="hero-pattern"></div>
-  <div class="hero-inner">
-    <div class="hero-kicker" data-i18n="hero-kicker">Äkta mexikansk musik · i Sverige</div>
-    <h1 style="line-height:1;">
-      <img src="Logo_Transparent.png" alt="Mariachi Fiesta México" style="width:min(560px,90vw);height:auto;display:block;margin:0 auto;" onerror="this.style.display='none';document.getElementById('h1-fallback').style.display='block';" />
-      <span id="h1-fallback" style="display:none;">MARIACHI<br /><em>Fiesta México</em></span>
-    </h1>
-    <p class="hero-sub" data-i18n="hero-sub">Värme, energi och tradition — från Mexiko, i Sverige</p>
-    <a class="btn btn-primary" href="boka.html" data-i18n="btn-book">Boka oss till ditt event</a>
-    <a class="btn btn-ghost" href="spelningar.html#tidigare" data-i18n="btn-videos">Se våra videos ↓</a>
-    <div class="hero-photo">
-      <img src="Hero.jpg" alt="Mariachi Fiesta México — hela bandet" style="width:100%;height:auto;object-fit:contain;" />
+<main>
+<section style="padding:48px 0 56px;">
+  <div class="maxw" style="display:flex;flex-direction:column;align-items:center;gap:28px;">
+    <div class="member-grid" style="display:grid;grid-template-columns:repeat(auto-fit, minmax(230px, 1fr));max-width:520px;width:100%;">
+      <div class="member-card" id="m-card"></div>
     </div>
-  </div>
-</header>
-
-<section>
-  <div class="maxw">
-    <div class="sec-kicker" data-i18n="teaser-kicker">Välkommen in</div>
-    <h2 data-i18n="teaser-h2">Vad vill du <em>se</em>?</h2>
-    <div class="member-grid" style="max-width:860px;">
-      <a class="member-card" href="spelningar.html" style="text-decoration:none;color:inherit;">
-        <div class="member-name" style="font-size:20px;">📅 Spelningar</div>
-        <p class="member-bio" data-i18n="teaser-gigs">Se när vi spelar nästa gång — och köp biljetter</p>
-      </a>
-      <a class="member-card" href="spelningar.html#tidigare" style="text-decoration:none;color:inherit;">
-        <div class="member-name" style="font-size:20px;">🎬 Filmer</div>
-        <p class="member-bio" data-i18n="teaser-videos">Se oss live på film från sommarens spelningar</p>
-      </a>
-      <a class="member-card" href="galleri.html#foton" style="text-decoration:none;color:inherit;">
-        <div class="member-name" style="font-size:20px;">📸 Foton</div>
-        <p class="member-bio" data-i18n="teaser-photos">Bilder från Gröna Lund och andra scenframträdanden</p>
-      </a>
-      <a class="member-card" href="galleri.html" style="text-decoration:none;color:inherit;">
-        <div class="member-name" style="font-size:20px;">🎺 Om oss</div>
-        <p class="member-bio" data-i18n="teaser-about">Möt de tolv musikanterna i bandet</p>
-      </a>
-      <a class="member-card" href="boka.html" style="text-decoration:none;color:inherit;">
-        <div class="member-name" style="font-size:20px;">✉️ Boka</div>
-        <p class="member-bio" data-i18n="teaser-book">Ta kontakt för bröllop, fest och event</p>
-      </a>
-    </div>
+    <a href="galleri.html" style="display:inline-block;font-family:system-ui,sans-serif;font-size:14px;color:var(--gold-bright);text-decoration:none;border-bottom:1px solid rgba(224,168,60,0.5);">← <span data-i18n="member-back" data-i18n-sv="Alla medlemmar">Alla medlemmar</span></a>
   </div>
 </section>
+</main>
 
 <footer>
   <div class="maxw foot">
@@ -125,11 +90,21 @@
   </div>
 </footer>
 
+<script src="members.js"></script>
+<script>
+(function () {
+  var slug = new URLSearchParams(location.search).get("n") || "";
+  var m = window.MEMBERS && MEMBERS[slug];
+  if (!m) { location.replace("index.html#om-oss"); return; }
+  document.getElementById("m-card").innerHTML = m.card;
+  document.title = m.name + " — Mariachi Fiesta México";
+})();
+</script>
 <script src="i18n.js"></script>
-
 
 <script data-goatcounter="https://ERAT-KOD.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" nonce="SfjscLIHDFGuaxDExD/c1w==" data-cf-beacon='{"version":"2024.11.0","token":"36b4216ae2dc4d5488c249161e71fe1e","spa":2}' crossorigin="anonymous"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" nonce="/+yGGdhHEL/+KrVjaHWhbw==" data-cf-beacon='{"version":"2024.11.0","token":"36b4216ae2dc4d5488c249161e71fe1e","spa":2}' crossorigin="anonymous"></script>
 </body>
 </html>
+
