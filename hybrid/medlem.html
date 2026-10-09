@@ -1,0 +1,126 @@
+<!doctype html>
+<html lang="sv">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Mariachi Fiesta México</title>
+<meta name="description" content="Mariachi Fiesta México — Stockholms mariachiband." />
+<link rel="stylesheet" href="style.css" />
+<style>
+  @media (max-width: 720px) { .maxw[style*="grid-template-columns"] { grid-template-columns: 1fr !important; } }
+</style>
+</head>
+<body>
+
+<div class="topbar">
+  <div class="maxw">
+    <div class="brand">
+      <!-- Riktig logga: Logo_Transparent.png (transparent bakgrund, bred) -->
+      <img src="Logo_Transparent.png" alt="Mariachi Fiesta México" style="height:52px;" onerror="this.style.display='none';document.getElementById('brand-fallback').style.display='flex';" />
+      <div id="brand-fallback" style="display:none;align-items:center;gap:10px;">
+        <div class="brand-mark">M</div>
+        <div class="brand-name">MARIACHI <b>Fiesta México</b></div>
+      </div>
+    </div>
+    <nav>
+      <a href="index.html#spelningar" data-i18n="nav-gigs">Spelningar</a>
+      <a href="index.html#videos" data-i18n="nav-videos">Videos</a>
+      <a href="index.html#foton" data-i18n="nav-photos">Foton</a>
+      <a href="index.html#om-oss" data-i18n="nav-about">Om oss</a>
+      <a href="index.html#boka" data-i18n="nav-book">Boka</a>
+    </nav>
+    <div class="lang" style="gap:6px;" title="Svenska / English / Español">
+      <span class="active" data-lang="sv" style="display:inline-flex;padding:3px;border-radius:4px;">
+        <svg width="26" height="17" viewBox="0 0 1600 1000" style="border-radius:2px;display:block;"><rect width="1600" height="1000" fill="#006AA7"/><rect x="500" width="200" height="1000" fill="#FECC02"/><rect y="400" width="1600" height="200" fill="#FECC02"/></svg>
+      </span><span data-lang="en" style="display:inline-flex;padding:3px;border-radius:4px;">
+        <svg width="26" height="17" viewBox="0 0 1300 700" style="border-radius:2px;display:block;">
+          <rect width="1300" height="700" fill="#B22234"/>
+          <g fill="#fff"><rect y="70" width="1300" height="70"/><rect y="210" width="1300" height="70"/><rect y="350" width="1300" height="70"/><rect y="490" width="1300" height="70"/><rect y="630" width="1300" height="70"/></g>
+          <rect width="560" height="400" fill="#3C3B6E"/>
+          <g fill="#fff">
+            <circle cx="60" cy="50" r="13"/><circle cx="140" cy="50" r="13"/><circle cx="220" cy="50" r="13"/><circle cx="300" cy="50" r="13"/><circle cx="380" cy="50" r="13"/><circle cx="460" cy="50" r="13"/><circle cx="540" cy="50" r="13"/>
+            <circle cx="100" cy="110" r="13"/><circle cx="180" cy="110" r="13"/><circle cx="260" cy="110" r="13"/><circle cx="340" cy="110" r="13"/><circle cx="420" cy="110" r="13"/><circle cx="500" cy="110" r="13"/>
+            <circle cx="60" cy="170" r="13"/><circle cx="140" cy="170" r="13"/><circle cx="220" cy="170" r="13"/><circle cx="300" cy="170" r="13"/><circle cx="380" cy="170" r="13"/><circle cx="460" cy="170" r="13"/><circle cx="540" cy="170" r="13"/>
+            <circle cx="100" cy="230" r="13"/><circle cx="180" cy="230" r="13"/><circle cx="260" cy="230" r="13"/><circle cx="340" cy="230" r="13"/><circle cx="420" cy="230" r="13"/><circle cx="500" cy="230" r="13"/>
+            <circle cx="60" cy="290" r="13"/><circle cx="140" cy="290" r="13"/><circle cx="220" cy="290" r="13"/><circle cx="300" cy="290" r="13"/><circle cx="380" cy="290" r="13"/><circle cx="460" cy="290" r="13"/><circle cx="540" cy="290" r="13"/>
+            <circle cx="100" cy="350" r="13"/><circle cx="180" cy="350" r="13"/><circle cx="260" cy="350" r="13"/><circle cx="340" cy="350" r="13"/><circle cx="420" cy="350" r="13"/><circle cx="500" cy="350" r="13"/>
+          </g>
+        </svg>
+      </span><span data-lang="es" style="display:inline-flex;padding:3px;border-radius:4px;">
+        <img src="https://flagcdn.com/mx.svg" alt="Español" width="26" height="17" style="border-radius:2px;display:block;object-fit:cover;" />
+      </span>
+    </div>
+  </div>
+</div>
+
+
+
+<main>
+<section style="padding:56px 0 48px;">
+  <div class="maxw" style="display:grid;grid-template-columns:minmax(220px,300px) 1fr;gap:44px;align-items:start;">
+    <div id="m-photo"></div>
+    <div>
+      <h1 class="member-name" id="m-name" style="font-size:36px;margin:0 0 6px;"></h1>
+      <div class="member-role" id="m-role"></div>
+      <p class="member-bio" id="m-bio" style="margin-top:16px;max-width:640px;"></p>
+      <a href="index.html#om-oss" style="display:inline-block;margin-top:22px;font-family:system-ui,sans-serif;font-size:14px;color:var(--gold-bright);text-decoration:none;border-bottom:1px solid rgba(224,168,60,0.5);">← <span data-i18n="member-back">Alla medlemmar</span></a>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="maxw foot">
+    <div class="brand">
+      <img src="Logo_Transparent.png" alt="Mariachi Fiesta México" style="height:46px;" onerror="this.style.display='none';this.nextElementSibling.style.display='flex';" />
+      <div style="display:none;align-items:center;gap:10px;">
+        <div class="brand-mark">M</div>
+        <div class="brand-name">MARIACHI <b>Fiesta México</b></div>
+      </div>
+    </div>
+    <div class="socials">
+      <a class="social" href="https://www.facebook.com/search/top?q=mariachi%20fiesta%20m%C3%A9xico" target="_blank" rel="noopener" title="Facebook — Mariachi Fiesta México">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.3V11H8.5v3h2.8v7h2.2z"/></svg>
+      </a>
+      <a class="social" href="https://www.instagram.com/fiestamexico/" target="_blank" rel="noopener" title="Instagram — @fiestamexico">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><rect x="3.5" y="3.5" width="17" height="17" rx="4.5"/><circle cx="12" cy="12" r="4"/><circle cx="17.2" cy="6.8" r="1.1" fill="currentColor" stroke="none"/></svg>
+      </a>
+      <a class="social" href="https://www.youtube.com/@fiestamexico" target="_blank" rel="noopener" title="YouTube — @fiestamexico">
+        <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M21.6 7.2a2.5 2.5 0 0 0-1.8-1.8C18.2 5 12 5 12 5s-6.2 0-7.8.4A2.5 2.5 0 0 0 2.4 7.2 26 26 0 0 0 2 12a26 26 0 0 0 .4 4.8 2.5 2.5 0 0 0 1.8 1.8c1.6.4 7.8.4 7.8.4s6.2 0 7.8-.4a2.5 2.5 0 0 0 1.8-1.8A26 26 0 0 0 22 12a26 26 0 0 0-.4-4.8zM10 15.2V8.8l5.2 3.2L10 15.2z"/></svg>
+      </a>
+    </div>
+    <div class="foot-meta">
+      <div class="hash">#mariachisueco</div>
+      <div data-i18n="foot-meta">© 2026 Mariachi Fiesta México · Fotografi: <a href="https://www.1-way-ticket.com/clients" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Karen Pérez Guzmán</a>, Nina &amp; psp.gallery</div>
+    </div>
+  </div>
+</footer>
+
+<script src="members.js"></script>
+<script>
+(function () {
+  var slug = new URLSearchParams(location.search).get("n") || "";
+  var m = window.MEMBERS && MEMBERS[slug];
+  if (!m) { location.replace("index.html#om-oss"); return; }
+  document.getElementById("m-photo").innerHTML = m.photo;
+  document.getElementById("m-name").textContent = m.name;
+  var role = document.getElementById("m-role");
+  role.setAttribute("data-i18n", "m-" + slug + "-role");
+  role.setAttribute("data-i18n-sv", m.role);
+  role.innerHTML = m.role;
+  var bio = document.getElementById("m-bio");
+  bio.setAttribute("data-i18n", "m-" + slug + "-bio");
+  bio.setAttribute("data-i18n-sv", m.bio);
+  bio.innerHTML = m.bio;
+  document.title = m.name + " — Mariachi Fiesta México";
+  var md = document.querySelector('meta[name="description"]');
+  if (md) md.setAttribute("content", m.name + ", " + m.role.replace(/&amp;/g, "&") + " i Mariachi Fiesta México — Stockholms mariachiband.");
+})();
+</script>
+<script src="i18n.js"></script>
+
+<script data-goatcounter="https://ERAT-KOD.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
+
+</body>
+</html>
+
