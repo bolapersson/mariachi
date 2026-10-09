@@ -1,6 +1,6 @@
   var I18N = {
     en: {
-      "nav-gigs": "Gigs", "nav-videos": "Videos", "nav-photos": "Photos", "nav-about": "About", "nav-book": "Book us",
+      "nav-home": "Home", "back-home": "Back to the start page", "nav-videos": "Videos", "nav-photos": "Photos", "nav-about": "About & Gallery", "nav-book": "Contact",
       "hero-kicker": "Authentic Mexican Music · In Sweden",
       "hero-sub": "Warmth, energy and tradition — from Mexico, in Sweden",
       "teaser-kicker": "Welcome in", "teaser-h2": "What would you <em>like to see</em>?", "member-back": "All members",
@@ -65,7 +65,7 @@
       "foot-meta": "© 2026 Mariachi Fiesta México · Photography: <a href=\"https://www.1-way-ticket.com/clients\" target=\"_blank\" rel=\"noopener\" style=\"color:inherit;text-decoration:underline;\">Karen Pérez Guzmán</a>, Nina &amp; psp.gallery"
     },
     es: {
-      "nav-gigs": "Conciertos", "nav-videos": "Vídeos", "nav-photos": "Fotos", "nav-about": "Nosotros", "nav-book": "Contrátanos",
+      "nav-home": "Inicio", "back-home": "Volver al inicio", "nav-videos": "Vídeos", "nav-photos": "Fotos", "nav-about": "Nosotros y Galería", "nav-book": "Contacto",
       "hero-kicker": "Música mexicana auténtica · en Suecia",
       "hero-sub": "Calor, energía y tradición — de México, a Suecia",
       "btn-book": "Contrátanos para tu evento", "btn-videos": "Mira nuestros vídeos ↓",
