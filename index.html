@@ -3,265 +3,56 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Mariachi Fiesta México — Designutkast</title>
-<style>
-  :root {
-    --bg: #1a0f0a;
-    --bg2: #241410;
-    --panel: #2e1a12;
-    --gold: #e0a83c;
-    --gold-bright: #f5c96a;
-    --cream: #f7ead5;
-    --terra: #c25a2e;
-    --terra-soft: #a34922;
-    --green: #2f6b4f;
-    --red: #a5231b;
-    --text: #f3e3cd;
-    --muted: #cbb391;
-    --serif: Georgia, "Times New Roman", serif;
-  }
-  * { margin: 0; padding: 0; box-sizing: border-box; }
-  html { scroll-behavior: smooth; }
-  body {
-    font-family: var(--serif);
-    background: var(--bg);
-    color: var(--text);
-    line-height: 1.6;
-  }
-  .maxw { max-width: 1080px; margin: 0 auto; padding: 0 24px; }
+<title>Mariachi i Stockholm — Mariachi Fiesta México | Bröllop, event & fest</title>
+<meta name="keywords" content="mariachi Stockholm, mariachi Sverige, mariachi band Stockholm, mexikansk musik Stockholm, mariachi bröllop, boka mariachi" />
+  <meta name="description" content="Mariachi Fiesta México är ett mariachiband i Stockholm som spelar äkta mexikansk musik — på bröllop, företagsevent, födelsedagar och festivaler i hela Sverige. Boka oss till ditt event!" />
+<meta property="og:title" content="Mariachi Fiesta México — Mariachi i Stockholm" />
+  <meta property="og:description" content="Äkta mexikansk musik för bröllop, event och fest — boka Sveriges mariachiband!" />
+  <meta property="og:type" content="website" />
+  <meta property="og:image" content="https://bolapersson.github.io/mariachi/Hero.jpg" />
+  <meta property="og:url" content="https://bolapersson.github.io/mariachi/" />
+  <link rel="stylesheet" href="style.css" />
 
-  /* Topbar */
-  .topbar {
-    position: sticky; top: 0; z-index: 50;
-    background: rgba(26,15,10,0.94);
-    border-bottom: 1px solid rgba(224,168,60,0.25);
-    backdrop-filter: blur(6px);
-  }
-  .topbar .maxw { display: flex; align-items: center; justify-content: space-between; height: 64px; }
-  .brand { display: flex; align-items: center; gap: 10px; }
-  .brand-mark {
-    width: 38px; height: 38px; border-radius: 50%;
-    background: radial-gradient(circle at 30% 30%, var(--gold-bright), var(--terra));
-    display: flex; align-items: center; justify-content: center;
-    font-size: 19px; color: #1a0f0a; font-weight: bold;
-    border: 2px solid var(--gold);
-  }
-  .brand-name { font-size: 19px; letter-spacing: 0.12em; color: #fff; }
-  .brand-name b { font-family: "Segoe Script", "Brush Script MT", cursive; font-size: 21px; font-weight: normal; letter-spacing: 0; color: #fff; padding-left: 2px; }
-  nav { display: flex; gap: 26px; font-family: system-ui, sans-serif; font-size: 13.5px; letter-spacing: 0.06em; }
-  nav a { color: var(--muted); text-decoration: none; text-transform: uppercase; }
-  nav a:hover { color: var(--gold-bright); }
-  .lang { display: flex; gap: 6px; font-family: system-ui, sans-serif; font-size: 12.5px; }
-  .lang span { padding: 3px 8px; border-radius: 12px; cursor: pointer; color: var(--muted); }
-  .lang .active { background: var(--gold); color: #1a0f0a; font-weight: 600; }
-
-  /* Hero */
-  .hero {
-    position: relative;
-    min-height: 88vh;
-    display: flex; align-items: center; justify-content: center;
-    text-align: center;
-    background:
-      radial-gradient(ellipse at 50% 0%, rgba(194,90,46,0.35), transparent 60%),
-      radial-gradient(ellipse at 50% 120%, rgba(47,107,79,0.3), transparent 55%),
-      linear-gradient(180deg, #22100b 0%, var(--bg) 70%);
-    overflow: hidden;
-  }
-  .hero-pattern {
-    position: absolute; inset: 0; opacity: 0.08;
-    background-image: repeating-linear-gradient(45deg, var(--gold) 0 2px, transparent 2px 22px),
-                      repeating-linear-gradient(-45deg, var(--gold) 0 2px, transparent 2px 22px);
-  }
-  .hero-inner { position: relative; padding: 60px 20px; max-width: 860px; }
-  .hero-photo {
-    position: relative; margin: 40px auto 0; max-width: 760px;
-    border-radius: 14px; overflow: hidden;
-    border: 2px solid rgba(224,168,60,0.5);
-    box-shadow: 0 18px 60px rgba(0,0,0,0.55);
-    background:
-      radial-gradient(circle at 60% 35%, rgba(194,90,46,0.5), transparent 60%),
-      linear-gradient(160deg, #4a2414, #241410);
-    display: flex; align-items: flex-end; padding: 0;
-  }
-  .hero-photo img { display: block; width: 100%; height: auto; }
-  .hero-photo .ph-label { position: absolute; left: 14px; bottom: 12px; font-family: system-ui, sans-serif; font-size: 12px; color: rgba(247,234,213,0.85); letter-spacing: 0.08em; text-transform: uppercase; text-shadow: 0 2px 8px rgba(0,0,0,0.8); }
-  .hero-kicker {
-    font-family: system-ui, sans-serif; font-size: 13px; letter-spacing: 0.35em;
-    text-transform: uppercase; color: var(--gold); margin-bottom: 18px;
-  }
-  .hero h1 {
-    font-size: clamp(40px, 7vw, 74px); line-height: 1.05; color: #fff;
-    text-shadow: 0 4px 30px rgba(0,0,0,0.5);
-    margin-bottom: 14px;
-  }
-  .hero h1 em { font-style: normal; font-family: "Segoe Script", "Brush Script MT", cursive; font-size: 0.95em; color: var(--gold-bright); }
-  .hero-sub { font-size: clamp(17px, 2.4vw, 21px); color: var(--muted); font-style: italic; margin-bottom: 34px; }
-  .btn {
-    display: inline-block; padding: 14px 34px; border-radius: 40px;
-    font-family: system-ui, sans-serif; font-size: 15px; font-weight: 600;
-    text-decoration: none; letter-spacing: 0.04em; margin: 0 8px;
-    transition: transform 0.15s ease;
-  }
-  .btn:hover { transform: translateY(-2px); }
-  .btn-primary { background: linear-gradient(135deg, var(--gold-bright), var(--terra)); color: #241410; box-shadow: 0 6px 24px rgba(224,168,60,0.35); }
-  .btn-ghost { border: 1.5px solid var(--gold); color: var(--gold-bright); }
-
-  /* Sections */
-  section { padding: 84px 0; }
-  .sec-kicker { font-family: system-ui, sans-serif; font-size: 12px; letter-spacing: 0.3em; text-transform: uppercase; color: var(--terra); margin-bottom: 10px; }
-  h2 { font-size: clamp(28px, 4vw, 40px); color: var(--cream); margin-bottom: 28px; }
-  h2 em { font-style: normal; color: var(--gold-bright); }
-  .alt-bg { background: var(--bg2); }
-
-  /* Gig list */
-  .gig-list { display: grid; gap: 14px; max-width: 640px; }
-  .gig {
-    display: flex; align-items: center; gap: 18px;
-    background: var(--panel); border: 1px solid rgba(224,168,60,0.2);
-    border-radius: 12px; padding: 16px 20px;
-  }
-  .gig-date { text-align: center; min-width: 56px; }
-  .gig-date b { display: block; font-size: 26px; color: var(--gold-bright); line-height: 1; }
-  .gig-date span { font-family: system-ui, sans-serif; font-size: 11px; letter-spacing: 0.15em; color: var(--muted); }
-  .gig-info .t { font-size: 17px; color: var(--cream); }
-  .gig-info .d { font-family: system-ui, sans-serif; font-size: 12.5px; color: var(--muted); margin-top: 2px; }
-  .gig-empty { font-style: italic; color: var(--muted); }
-  .gig-empty a { color: var(--gold-bright); }
-
-  /* Videos */
-  .video-grid { display: grid; gap: 22px; }
-  .video-row { display: flex; gap: 22px; justify-content: center; flex-wrap: wrap; }
-  .video-row .video-card { flex: 1 1 320px; max-width: 560px; }
-  .video-card {
-    background: var(--panel); border-radius: 12px; overflow: hidden;
-    border: 1px solid rgba(224,168,60,0.2);
-  }
-  .video-hero { grid-column: 1 / -1; border-color: rgba(224,168,60,0.45); box-shadow: 0 10px 40px rgba(0,0,0,0.4); }
-  .video-thumb {
-    aspect-ratio: 16 / 9; position: relative;
-    display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 12px;
-    background:
-      radial-gradient(circle at 50% 40%, rgba(194,90,46,0.4), transparent 65%),
-      linear-gradient(160deg, #3a2013, #1a0f0a);
-    cursor: pointer;
-  }
-  .video-thumb:hover .play-btn { transform: scale(1.1); }
-  .play-btn {
-    width: 62px; height: 62px; border-radius: 50%;
-    background: linear-gradient(135deg, var(--gold-bright), var(--terra));
-    display: flex; align-items: center; justify-content: center;
-    transition: transform 0.15s ease;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.45);
-  }
-  .play-btn::after {
-    content: ""; display: block; margin-left: 4px;
-    border-left: 20px solid #241410; border-top: 12px solid transparent; border-bottom: 12px solid transparent;
-  }
-  .video-thumb .tag {
-    position: absolute; top: 12px; left: 12px;
-    font-family: system-ui, sans-serif; font-size: 11px; letter-spacing: 0.1em;
-    background: rgba(26,15,10,0.8); color: var(--gold-bright);
-    padding: 4px 10px; border-radius: 14px; border: 1px solid rgba(224,168,60,0.4);
-  }
-  img { max-width: 100%; }
-  .video-thumb img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; opacity: 0.9; }
-  .video-thumb .play-btn { position: relative; z-index: 2; }
-  .video-thumb .ph-label, .video-thumb .tag { z-index: 3; }
-  .video-link { text-decoration: none; display: block; color: inherit; }
-  .video-meta { padding: 14px 16px; }
-  .video-meta .t { font-size: 17px; color: var(--cream); }
-  .video-meta .d { font-family: system-ui, sans-serif; font-size: 12.5px; color: var(--muted); margin-top: 3px; }
-
-  /* Gallery */
-  .gallery { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; }
-  .gallery-side { display: grid; grid-template-rows: 1fr 1fr; gap: 16px; }
-  .ph {
-    border-radius: 12px; position: relative; overflow: hidden;
-    border: 1px solid rgba(224,168,60,0.2);
-    display: flex; align-items: flex-end; padding: 16px;
-    min-height: 180px;
-  }
-  .ph .credit {
-    position: absolute; bottom: 10px; right: 14px;
-    font-family: system-ui, sans-serif; font-size: 10.5px; color: rgba(247,234,213,0.7);
-    background: rgba(26,15,10,0.6); padding: 3px 9px; border-radius: 10px;
-  }
-  .ph-1 { background: linear-gradient(150deg, #7a2d14, #3a1a0e); min-height: 380px; }
-  .ph-2 { background: linear-gradient(150deg, #2f6b4f, #16321f); }
-  .ph-3 { background: linear-gradient(150deg, #8a2a22, #3a120e); }
-  .ph-label { font-family: system-ui, sans-serif; font-size: 12px; color: rgba(247,234,213,0.85); letter-spacing: 0.08em; text-transform: uppercase; }
-
-  /* Bio */
-  .bio { display: grid; grid-template-columns: 1.2fr 0.8fr; gap: 44px; align-items: start; }
-  .bio p { margin-bottom: 16px; color: var(--text); }
-  .bio .quote {
-    border-left: 3px solid var(--gold); padding: 6px 0 6px 18px;
-    font-style: italic; color: var(--muted); margin: 22px 0;
-  }
-  .bio-facts { display: grid; gap: 12px; }
-  .member-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(230px, 1fr)); gap: 22px; margin-top: 26px; }
-  .member-card {
-    border: 1px solid rgba(224,168,60,0.25); border-radius: 14px; padding: 16px;
-    background: rgba(36,20,16,0.35);
-    display: flex; flex-direction: column; gap: 6px;
-    transition: border-color 0.2s ease;
-  }
-  .member-card:hover { border-color: rgba(224,168,60,0.6); }
-  .member-photo { border-radius: 10px; overflow: hidden; aspect-ratio: 3 / 4; background: linear-gradient(150deg, #7a2d14, #3a1a0e); }
-  .member-photo img { width: 100%; height: 100%; object-fit: cover; display: block; }
-  .member-name { font-family: var(--serif); font-size: 22px; color: #fff; margin-top: 10px; }
-  .member-role { font-family: system-ui, sans-serif; font-size: 12px; letter-spacing: 0.14em; text-transform: uppercase; color: var(--gold); }
-  .member-bio { font-family: system-ui, sans-serif; font-size: 14px; line-height: 1.55; color: rgba(247,234,213,0.82); }
-  .fact { background: var(--panel); border-radius: 10px; padding: 16px 18px; border: 1px solid rgba(224,168,60,0.15); }
-  .fact .n { font-size: 26px; color: var(--gold-bright); }
-  .fact .l { font-family: system-ui, sans-serif; font-size: 12.5px; color: var(--muted); }
-
-  /* Booking */
-  .book { text-align: center; }
-  .book-box {
-    max-width: 720px; margin: 0 auto;
-    background: linear-gradient(160deg, var(--panel), #241410);
-    border: 1px solid rgba(224,168,60,0.35);
-    border-radius: 16px; padding: 46px 34px;
-    box-shadow: 0 14px 50px rgba(0,0,0,0.45);
-  }
-  .book-box h3 { font-size: 24px; color: var(--cream); margin-bottom: 10px; }
-  .book-box p { color: var(--muted); margin-bottom: 24px; }
-  .chips { display: flex; flex-wrap: wrap; gap: 10px; justify-content: center; margin-bottom: 28px; }
-  .chip {
-    font-family: system-ui, sans-serif; font-size: 12.5px;
-    padding: 5px 12px; border-radius: 6px;
-    background: transparent; color: var(--muted);
-    border: 1px solid rgba(203,179,145,0.35);
-    cursor: default; user-select: none;
-    letter-spacing: 0.02em;
-  }
-  .gdpr-note { font-family: system-ui, sans-serif; font-size: 11.5px; color: rgba(203,179,145,0.65); margin-top: 20px; }
-
-  /* Footer */
-  footer { background: #120a06; border-top: 1px solid rgba(224,168,60,0.2); padding: 40px 0 30px; }
-  .foot { display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 18px; }
-  .socials { display: flex; gap: 14px; }
-  .social {
-    width: 40px; height: 40px; border-radius: 50%;
-    border: 1px solid rgba(224,168,60,0.4);
-    display: flex; align-items: center; justify-content: center;
-    font-family: system-ui, sans-serif; font-size: 13px; color: var(--gold-bright);
-    cursor: pointer; transition: background 0.15s;
-  }
-  .social { text-decoration: none; }
-  .social:hover { background: rgba(224,168,60,0.15); color: var(--gold-bright); }
-  .foot-meta { font-family: system-ui, sans-serif; font-size: 12px; color: var(--muted); text-align: right; }
-  .foot-meta .hash { color: var(--gold-bright); }
-
-  @media (max-width: 720px) {
-    .gallery { grid-template-columns: 1fr; }
-    .gallery-side { grid-template-columns: 1fr 1fr; grid-template-rows: none; }
-    .bio { grid-template-columns: 1fr; }
-    nav { display: none; }
-    .ph-1 { min-height: 240px; }
-  }
-</style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "MusicGroup",
+  "name": "Mariachi Fiesta México",
+  "description": "Mariachiband i Stockholm som spelar äkta mexikansk musik — bröllop, företagsevent, födelsedagar och festivaler i hela Sverige.",
+  "genre": ["Mariachi", "Mexikansk folkmusik", "Regional mexicano"],
+  "url": "https://bolapersson.github.io/mariachi/",
+  "logo": "https://bolapersson.github.io/mariachi/Logo_Transparent.png",
+  "image": "https://bolapersson.github.io/mariachi/Hero.jpg",
+  "email": "info@mariachi.se",
+  "locationCreated": { "@type": "Place", "name": "Stockholm, Sverige" },
+  "areaServed": { "@type": "Country", "name": "Sverige" },
+  "address": { "@type": "PostalAddress", "addressLocality": "Stockholm", "addressCountry": "SE" },
+  "sameAs": [
+    "https://www.facebook.com/fiestamexico",
+    "https://www.instagram.com/fiestamexico/",
+    "https://www.youtube.com/@fiestamexico"
+  ],
+  "event": [
+    {
+      "@type": "Event",
+      "name": "Fiesta en el cementerio — Fest på kyrkogården",
+      "startDate": "2026-10-31T11:00:00",
+      "endDate": "2026-10-31T17:00:00",
+      "eventStatus": "https://schema.org/EventScheduled",
+      "location": {
+        "@type": "Place",
+        "name": "Etnografiska museet",
+        "address": { "@type": "PostalAddress", "addressLocality": "Stockholm", "addressCountry": "SE" }
+      },
+      "offers": {
+        "@type": "Offer",
+        "url": "https://www.etnografiskamuseet.se/kalendarium/program/de-dodas-dag2/2026-10-31/",
+        "availability": "https://schema.org/InStock"
+      }
+    }
+  ]
+}
+</script>
 </head>
 <body>
 
@@ -276,6 +67,7 @@
       </div>
     </div>
     <nav>
+      <a href="#top" data-i18n="nav-home">Startsidan</a>
       <a href="#spelningar" data-i18n="nav-gigs">Spelningar</a>
       <a href="#videos" data-i18n="nav-videos">Videos</a>
       <a href="#foton" data-i18n="nav-photos">Foton</a>
@@ -306,19 +98,30 @@
   </div>
 </div>
 
-<header class="hero">
+
+
+<header class="hero" id="top">
   <div class="hero-pattern"></div>
   <div class="hero-inner">
+    
+    <div id="next-gig-banner" style="margin:0 auto 18px;max-width:640px;padding:12px 18px;border:1px solid rgba(224,168,60,0.55);border-radius:12px;background:rgba(122,45,20,0.55);display:flex;align-items:center;gap:14px;flex-wrap:wrap;justify-content:center;">
+      <div style="font-family:system-ui,sans-serif;display:flex;align-items:center;gap:10px;">
+        <span style="background:var(--gold-bright,#e0a83c);color:#241007;font-weight:700;border-radius:8px;padding:4px 10px;font-size:14px;white-space:nowrap;">31 OKT</span>
+        <span style="color:#f3e5cd;font-size:14.5px;font-weight:600;" data-i18n="banner-t">Fiesta en el cementerio — Fest på kyrkogården</span>
+      </div>
+      <a class="gig-cta" href="https://www.etnografiskamuseet.se/kalendarium/program/de-dodas-dag2/2026-10-31/" target="_blank" rel="noopener" data-i18n="banner-btn" style="white-space:nowrap;">Köp biljetter</a>
+    </div>
     <div class="hero-kicker" data-i18n="hero-kicker">Äkta mexikansk musik · i Sverige</div>
     <h1 style="line-height:1;">
       <img src="Logo_Transparent.png" alt="Mariachi Fiesta México" style="width:min(560px,90vw);height:auto;display:block;margin:0 auto;" onerror="this.style.display='none';document.getElementById('h1-fallback').style.display='block';" />
       <span id="h1-fallback" style="display:none;">MARIACHI<br /><em>Fiesta México</em></span>
     </h1>
     <p class="hero-sub" data-i18n="hero-sub">Värme, energi och tradition — från Mexiko, i Sverige</p>
+    <p class="hero-seo" data-i18n="hero-seo" style="font-family:system-ui,sans-serif;font-size:15px;line-height:1.6;color:rgba(203,179,145,0.9);max-width:640px;margin:0 auto 18px;">Vi är ett mariachiband i Stockholm som spelar äkta mexikansk musik — på bröllop, företagsevent, födelsedagar och festivaler. <a href="#om-oss" data-i18n="hero-omoss" style="color:var(--gold-bright);text-decoration:none;border-bottom:1px solid rgba(224,168,60,0.5);">Läs mer om oss</a></p>
     <a class="btn btn-primary" href="#boka" data-i18n="btn-book">Boka oss till ditt event</a>
     <a class="btn btn-ghost" href="#videos" data-i18n="btn-videos">Se våra videos ↓</a>
     <div class="hero-photo">
-      <img src="Hero.jpg" alt="Mariachi Fiesta México — hela bandet" style="width:100%;height:auto;object-fit:contain;" />
+      <img src="Hero.jpg" alt="Mariachi Fiesta México — mariachiband i Stockholm med hela bandet i traditionella charro-dräkter" style="width:100%;height:auto;object-fit:contain;" />
     </div>
   </div>
 </header>
@@ -333,9 +136,11 @@
       <div class="gig">
         <div class="gig-date"><b>31</b><span data-i18n="gig-month">OKT</span></div>
         <div class="gig-info">
+          <div class="gig-tag" data-i18n="gig-tag">Publik spelning</div>
           <div class="t" data-i18n="gig-t">Fiesta en el cementerio — Fest på kyrkogården</div>
           <div class="d" data-i18n="gig-d">Etnografiska museet · kl 11:00–17:00 · Día de Muertos med folkdans, mariachi &amp; marknad</div>
         </div>
+        <a class="gig-cta" href="https://www.etnografiskamuseet.se/kalendarium/program/de-dodas-dag2/2026-10-31/" target="_blank" rel="noopener" data-i18n="gig-tickets">Köp biljetter</a>
       </div>
       <div class="gig-empty" data-i18n="gig-empty">Fler publika spelningar publiceras löpande — <a href="#boka">boka oss till ditt event</a>!</div>
     </div>
@@ -361,7 +166,7 @@
         </a>
         <div class="video-meta">
           <div class="t"><a href="https://youtu.be/_LXjcF9zYGg" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(224,168,60,0.5);">Fiesta México</a></div>
-          <div class="d" data-i18n="v1-d">Kungsträdgården / Etnografiska · © Karen Pérez Guzmán</div>
+          <div class="d" data-i18n="v1-d">Kungsträdgården / Etnografiska · © <a href="https://www.1-way-ticket.com/clients" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px solid rgba(224,168,60,0.5);text-decoration:none;">Karen Pérez Guzmán</a></div>
         </div>
       </div>
       <div class="video-row">
@@ -374,7 +179,7 @@
         </a>
         <div class="video-meta">
           <div class="t"><a href="https://youtu.be/UukI89bmkYo" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(224,168,60,0.5);">Puro Mexicano</a></div>
-          <div class="d" data-i18n="v2-d">Kungsträdgården / Etnografiska · © Karen Pérez Guzmán</div>
+          <div class="d" data-i18n="v2-d">Kungsträdgården / Etnografiska · © <a href="https://www.1-way-ticket.com/clients" target="_blank" rel="noopener" style="color:inherit;border-bottom:1px solid rgba(224,168,60,0.5);text-decoration:none;">Karen Pérez Guzmán</a></div>
         </div>
       </div>
       <div class="video-card">
@@ -419,7 +224,7 @@
       <div>
         <p data-i18n="bio-p1">Mariachi Fiesta México grundades i Stockholm av musiker med anknytning till Mexiko och en gemensam kärlek till den mexikanska musiktraditionen. I spetsen står vår musikaliske ledare <b>Alejandro Becerra</b>, med rötter i <b>Guadalajara — mariachins vagga</b>. Vi spelar klassisk mariachi — sones, boleros och rancheras — med den värme och energi som genren kräver.</p>
         <p data-i18n="bio-p2">Vi har uppträtt på kulturscener, festivaler och privatevent — i Sverige och utomlands: från Etnografiska museets sommarscen och Kungsträdgården till Gröna Lunds stora scen, Riksscenen i Oslo och teater Degollado, Guadalajara, México. Repertoaren sträcker sig från klassiker som <i>El Rey</i> och <i>Cielito Lindo</i> till moderna favoriter som <i>México en la Piel</i>, <i>Canción del Mariachi</i> och <i>Nunca es Suficiente</i>.</p>
-        <div class="quote" data-i18n="quote">"Att ta en äkta känsla av Mexiko, dess musik och passion till en scen nära dej."</div>
+        <div class="quote" data-i18n="quote">"Att ta en äkta känsla av Mexiko, dess musik och passion till en scen nära dig."</div>
         <p data-i18n="bio-p3"><b>Boka oss</b> till bröllop, födelsedagar, företagsevent, festivaler och allt däremellan — hela bandet på din scen.</p>
       </div>
       <div class="bio-facts">
@@ -438,54 +243,55 @@
 
     <div class="sec-kicker" data-i18n="band-kicker" style="margin-top:56px;">Möt bandet</div>
     <h2 data-i18n="band-h2">Musikerna <em>bakom musiken</em></h2>
+    <a class="btn btn-primary" href="#medlemsgalleri" id="band-cta" data-i18n="band-cta" data-i18n-sv="Möt musikerna →" style="margin-top:8px;">Möt musikerna →</a>
+    <div id="medlemsgalleri" style="display:none;">
     <div class="member-grid">
-      <!-- Medlemmar i bokstavsordning efter förnamn -->
-      <div class="member-card">
+      <a class="member-card" href="medlem.html?n=alejandro" style="text-decoration:none;color:inherit;display:flex;">
         <div class="member-photo">
           <img src="Alejandro.jpg" alt="Alejandro — fiol, vihuela och sång" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'member-ph',style:'aspect-ratio:3/4;background:linear-gradient(150deg,#7a2d14,#3a1a0e);'}));" />
         </div>
         <div class="member-name">Alejandro</div>
         <div class="member-role" data-i18n="m-alejandro-role">Fiol, vihuela &amp; sång</div>
-        <p class="member-bio" data-i18n="m-alejandro-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
-      </div>
+      </a>
 
-      <div class="member-card">
+
+      <a class="member-card" href="medlem.html?n=annemarieke" style="text-decoration:none;color:inherit;display:flex;">
         <div class="member-photo">
           <img src="Annemarieke.jpg" alt="Annemarieke" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'member-ph',style:'aspect-ratio:3/4;background:linear-gradient(150deg,#7a2d14,#3a1a0e);'}));" />
         </div>
         <div class="member-name">Annemarieke</div>
         <div class="member-role" data-i18n="m-annemarieke-role">Fiol &amp; sång</div>
-        <p class="member-bio" data-i18n="m-annemarieke-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
-      </div>
+      </a>
 
-      <div class="member-card">
+
+      <a class="member-card" href="medlem.html?n=daniel" style="text-decoration:none;color:inherit;display:flex;">
         <div class="member-photo">
           <img src="Daniel.jpg" alt="Daniel — guitarrón" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'member-ph',style:'aspect-ratio:3/4;background:linear-gradient(150deg,#7a2d14,#3a1a0e);'}));" />
         </div>
         <div class="member-name">Daniel</div>
         <div class="member-role" data-i18n="m-daniel-role">Trumpet</div>
-        <p class="member-bio" data-i18n="m-daniel-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
-      </div>
+      </a>
 
-      <div class="member-card">
+
+      <a class="member-card" href="medlem.html?n=daniela" style="text-decoration:none;color:inherit;display:flex;">
         <div class="member-photo">
           <img src="Daniela.jpg" alt="Daniela" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'member-ph',style:'aspect-ratio:3/4;background:linear-gradient(150deg,#7a2d14,#3a1a0e);'}));" />
         </div>
         <div class="member-name">Daniela</div>
         <div class="member-role" data-i18n="m-daniela-role">Fiol &amp; sång</div>
-        <p class="member-bio" data-i18n="m-daniela-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
-      </div>
+      </a>
 
-      <div class="member-card">
+
+      <a class="member-card" href="medlem.html?n=eric" style="text-decoration:none;color:inherit;display:flex;">
         <div class="member-photo">
           <img src="Eric.jpg" alt="Eric" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'member-ph',style:'aspect-ratio:3/4;background:linear-gradient(150deg,#7a2d14,#3a1a0e);'}));" />
         </div>
         <div class="member-name">Eric</div>
         <div class="member-role" data-i18n="m-eric-role">Gitarr &amp; sång</div>
-        <p class="member-bio" data-i18n="m-eric-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
-      </div>
+      </a>
 
-      <div class="member-card">
+
+      <a class="member-card" href="medlem.html?n=fernando" style="text-decoration:none;color:inherit;display:flex;">
         <div class="member-photo">
           <div class="member-ph" style="aspect-ratio:3/4;background:linear-gradient(150deg,#7a2d14,#3a1a0e);display:flex;align-items:center;justify-content:center;">
             <span style="color:rgba(255,255,255,.55);font-size:.85rem;letter-spacing:.06em;text-transform:uppercase;" data-i18n="m-fernando-photo">foto saknas</span>
@@ -493,64 +299,65 @@
         </div>
         <div class="member-name">Fernando</div>
         <div class="member-role" data-i18n="m-fernando-role">Gitarr &amp; sång</div>
-        <p class="member-bio" data-i18n="m-fernando-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
-      </div>
+      </a>
 
-      <div class="member-card">
+
+      <a class="member-card" href="medlem.html?n=helena" style="text-decoration:none;color:inherit;display:flex;">
         <div class="member-photo">
           <img src="Helena.jpg" alt="Helena" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'member-ph',style:'aspect-ratio:3/4;background:linear-gradient(150deg,#7a2d14,#3a1a0e);'}));" />
         </div>
         <div class="member-name">Helena</div>
         <div class="member-role" data-i18n="m-helena-role">Fiol</div>
-        <p class="member-bio" data-i18n="m-helena-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
-      </div>
+      </a>
 
-      <div class="member-card">
+
+      <a class="member-card" href="medlem.html?n=niklas" style="text-decoration:none;color:inherit;display:flex;">
         <div class="member-photo">
           <img src="Niklas.jpg" alt="Niklas" loading="lazy" style="transform:translateY(-8%) scale(1.15);" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'member-ph',style:'aspect-ratio:3/4;background:linear-gradient(150deg,#7a2d14,#3a1a0e);'}));" />
         </div>
         <div class="member-name">Niklas</div>
         <div class="member-role" data-i18n="m-niklas-role">Guitarrón</div>
-        <p class="member-bio" data-i18n="m-niklas-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
-      </div>
+      </a>
 
-      <div class="member-card">
+
+      <a class="member-card" href="medlem.html?n=ola" style="text-decoration:none;color:inherit;display:flex;">
         <div class="member-photo">
           <img src="Ola.jpg" alt="Ola — trumpet och sång" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'member-ph',style:'aspect-ratio:3/4;background:linear-gradient(150deg,#7a2d14,#3a1a0e);'}));" />
         </div>
         <div class="member-name">Ola</div>
         <div class="member-role" data-i18n="m-ola-role">Trumpet &amp; sång</div>
-        <p class="member-bio" data-i18n="m-ola-bio">Skolad i kulturskolans trumpetklass och hos erfarna sångpedagoger. Har spelat i kommunal musikkår, sjungit i motettkörer och Kungliga Filharmoniska kören. Med i Mariachi Fiesta México nästan från början.</p>
-      </div>
+      </a>
 
-      <div class="member-card">
+
+      <a class="member-card" href="medlem.html?n=sebastian" style="text-decoration:none;color:inherit;display:flex;">
         <div class="member-photo">
           <img src="Sebastian.jpg" alt="Sebastian" loading="lazy" style="object-position:50% 0%;" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'member-ph',style:'aspect-ratio:3/4;background:linear-gradient(150deg,#7a2d14,#3a1a0e);'}));" />
         </div>
         <div class="member-name">Sebastian</div>
         <div class="member-role" data-i18n="m-sebastian-role">Vihuela &amp; sång</div>
-        <p class="member-bio" data-i18n="m-sebastian-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
-      </div>
+      </a>
 
-      <div class="member-card">
+
+      <a class="member-card" href="medlem.html?n=sigrid" style="text-decoration:none;color:inherit;display:flex;">
         <div class="member-photo">
           <img src="Sigrid.jpg" alt="Sigrid" loading="lazy" style="transform-origin:50% 100%;transform:scale(1.12);" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'member-ph',style:'aspect-ratio:3/4;background:linear-gradient(150deg,#7a2d14,#3a1a0e);'}));" />
         </div>
         <div class="member-name">Sigrid</div>
         <div class="member-role" data-i18n="m-sigrid-role">Fiol</div>
-        <p class="member-bio" data-i18n="m-sigrid-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
-      </div>
+      </a>
 
-      <div class="member-card">
+
+      <a class="member-card" href="medlem.html?n=simone" style="text-decoration:none;color:inherit;display:flex;">
         <div class="member-photo">
           <img src="Simone.jpg" alt="Simone" loading="lazy" onerror="this.replaceWith(Object.assign(document.createElement('div'),{className:'member-ph',style:'aspect-ratio:3/4;background:linear-gradient(150deg,#7a2d14,#3a1a0e);'}));" />
         </div>
         <div class="member-name">Simone</div>
         <div class="member-role" data-i18n="m-simone-role">Fiol</div>
-        <p class="member-bio" data-i18n="m-simone-bio">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.</p>
-      </div>
+      </a>
 
-      <!-- Fler medlemmar läggs här när foton kommer -->
+      
+    <!-- Fler medlemmar läggs här när foton kommer -->
+  </div>
     </div>
   </div>
 </section>
@@ -572,6 +379,16 @@
       </div>
       <a class="btn btn-primary" href="mailto:info@mariachi.se" data-i18n="book-btn">📩 Skicka bokningsförfrågan</a>
       <div class="gdpr-note" data-i18n="gdpr">🔒 Vi använder dina uppgifter (namn, e-post och telefon) endast för att planera din bokning. Vi delar aldrig dina uppgifter med tredje part och använder dem inte för marknadsföring.</div>
+
+    <div class="nl-box" style="margin-top:34px;padding:22px;border:1px solid rgba(224,168,60,0.35);border-radius:14px;background:rgba(58,26,14,0.5);">
+      <h3 data-i18n="nl-h" style="margin:0 0 6px;font-size:19px;">📬 Håll dig uppdaterad</h3>
+      <p data-i18n="nl-p" style="font-family:system-ui,sans-serif;font-size:13.5px;color:rgba(203,179,145,0.85);margin:0 0 14px;">Få våra kommande spelningar direkt i inkorgen — anmäl dig till vår e-postlista.</p>
+      <form onsubmit="var e=document.getElementById('nl-email').value;location.href='mailto:info@mariachi.se?subject='+encodeURIComponent('Anmälan till e-postlistan')+'&body='+encodeURIComponent('Anmäl mig till e-postlistan: '+e);return false;" style="display:flex;gap:10px;flex-wrap:wrap;">
+        <input id="nl-email" type="email" required placeholder="din@epost.se" style="flex:1;min-width:180px;padding:10px 14px;border-radius:8px;border:1px solid rgba(203,179,145,0.4);background:rgba(20,10,6,0.6);color:#f3e5cd;font-family:system-ui,sans-serif;font-size:14px;" />
+        <button type="submit" class="btn btn-primary" data-i18n="nl-btn" style="margin:0;">Anmäl dig</button>
+      </form>
+      <div style="font-family:system-ui,sans-serif;font-size:11.5px;color:rgba(203,179,145,0.6);margin-top:10px;" data-i18n="nl-gdpr">Din e-post används endast för utskick om våra spelningar — ingen marknadsföring från tredje part, avsluta när du vill.</div>
+    </div>
     </div>
   </div>
 </section>
@@ -586,7 +403,7 @@
       </div>
     </div>
     <div class="socials">
-      <a class="social" href="https://www.facebook.com/search/top?q=mariachi%20fiesta%20m%C3%A9xico" target="_blank" rel="noopener" title="Facebook — Mariachi Fiesta México">
+      <a class="social" href="https://www.facebook.com/fiestamexico" target="_blank" rel="noopener" title="Facebook — Mariachi Fiesta México">
         <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M13.5 21v-7h2.4l.4-3h-2.8V9.1c0-.9.3-1.5 1.6-1.5h1.3V4.9c-.2 0-1-.1-1.9-.1-1.9 0-3.2 1.2-3.2 3.3V11H8.5v3h2.8v7h2.2z"/></svg>
       </a>
       <a class="social" href="https://www.instagram.com/fiestamexico/" target="_blank" rel="noopener" title="Instagram — @fiestamexico">
@@ -598,225 +415,41 @@
     </div>
     <div class="foot-meta">
       <div class="hash">#mariachisueco</div>
-      <div data-i18n="foot-meta">© 2026 Fiesta México · Fotografi: Karen Pérez Guzmán</div>
+      <div data-i18n="foot-meta">© 2026 Mariachi Fiesta México · Fotografi: <a href="https://www.1-way-ticket.com/clients" target="_blank" rel="noopener" style="color:inherit;text-decoration:underline;">Karen Pérez Guzmán</a>, Nina &amp; psp.gallery</div>
     </div>
   </div>
 </footer>
 
 <script>
-  // Klickbar navigation fungerar även i canvas-preview (iframe utan URL-hash):
   document.querySelectorAll('a[href^="#"]').forEach(function (a) {
     a.addEventListener("click", function (e) {
       var id = a.getAttribute("href").slice(1);
       var target = id ? document.getElementById(id) : null;
-      if (target) {
-        e.preventDefault();
-        target.scrollIntoView({ behavior: "smooth" });
-      }
+      if (target) { e.preventDefault(); target.scrollIntoView({ behavior: "smooth" }); }
     });
   });
-  // Sociala ikonerna är nu riktiga länkar (Facebook/Instagram/YouTube).
-
-  // === Språkväljare: SV / EN / ES ===
-  // Svenska original sparas från HTML; EN/ES finns i ordboken nedan.
-  var I18N = {
-    en: {
-      "nav-gigs": "Gigs", "nav-videos": "Videos", "nav-photos": "Photos", "nav-about": "About", "nav-book": "Book us",
-      "hero-kicker": "Authentic Mexican Music · In Sweden",
-      "hero-sub": "Warmth, energy and tradition — from Mexico, in Sweden",
-      "btn-book": "Book us for your event", "btn-videos": "Watch our videos ↓",
-      "gigs-kicker": "Upcoming gigs", "gigs-h2": "Next time you can <em>see us live</em>",
-      "gig-t": "Fiesta en el cementerio — A party at the cemetery", "gig-month": "OCT",
-      "gig-d": "The Museum of Ethnography · 11:00–17:00 · Día de Muertos with folk dance, mariachi &amp; market",
-      "gig-empty": "More public gigs are published regularly — <a href=\"#boka\">book us for your event</a>!",
-      "gig-note": "",
-      "videos-kicker": "A taste of us", "videos-h2": "Video from <em>2026 performances</em>",
-      "v1-d": "Kungsträdgården / The Museum of Ethnography · © Karen Pérez Guzmán",
-      "v2-d": "Kungsträdgården / The Museum of Ethnography · © Karen Pérez Guzmán",
-      "v3-d": "Gröna Lund · © Nina",
-      "photos-kicker": "In pictures", "photos-h2": "Photos from <em>the summer</em>",
-      "about-kicker": "About us", "about-h2": "True to <em>Mexican tradition</em>",
-      "band-kicker": "Meet the band", "band-h2": "The musicians <em>behind the music</em>",
-      "genre-kicker": "What is mariachi?",
-      "genre-p1": "Mariachi is far more than music. It is a living tradition from western Mexico — an ensemble of violins, trumpets, vihuela, guitarrón and guitar, where the musicians take turns singing lead and the instruments answer each other in musical dialogue. The genre was born in Jalisco in the 19th century and has since accompanied Mexicans through every stage of life: baptisms, weddings, birthdays and days of mourning. Playing mariachi is about conveying joy, community and pride — <i>música del pueblo</i>, the music of the people.",
-      "genre-p2": "In 2011, mariachi was inscribed on <a href=\"https://ich.unesco.org/en/RL/mariachi-string-music-song-and-trumpet-00599\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold);text-decoration:underline;\">UNESCO's list of the Intangible Cultural Heritage of Humanity</a> — a recognition of the genre's central role in Mexican identity and culture.",
-      "m-ola-role": "Trumpet & vocals",
-      "m-ola-bio": "Trained in the municipal music school and with experienced vocal coaches. Has played in a community wind band and sung in motet choirs and the Royal Philharmonic Choir. With Mariachi Fiesta México almost from the start.",
-      "m-alejandro-role": "Violin, vihuela & vocals",
-      "m-alejandro-bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.",
-      "m-helena-role": "Violin",
-      "m-helena-bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.",
-      "m-daniela-role": "Violin & vocals",
-      "m-daniela-bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.",
-      "m-eric-role": "Guitar & vocals",
-      "m-fernando-photo": "no photo yet",
-      "m-fernando-role": "Guitar & vocals",
-      "m-fernando-bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "m-eric-bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.",
-      "m-annemarieke-role": "Violin & vocals",
-      "m-annemarieke-bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.",
-      "m-niklas-role": "Guitarrón",
-      "m-niklas-bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.",
-      "m-daniel-role": "Trumpet",
-      "m-daniel-bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.",
-      "m-simone-role": "Violin",
-      "m-simone-bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.",
-      "m-sebastian-role": "Vihuela & vocals",
-      "m-sebastian-bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.",
-      "m-sigrid-role": "Violin",
-      "m-sigrid-bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.",
-      "bio-p1": "Mariachi Fiesta México was founded in Stockholm by musicians with ties to Mexico and a shared love of the Mexican music tradition. Leading the band is our musical director <b>Alejandro Becerra</b>, with roots in <b>Guadalajara — the cradle of mariachi</b>. We play classic mariachi — sones, boleros and rancheras — with the warmth and energy the genre demands.",
-      "bio-p2": "We have performed on cultural stages, festivals and private events — in Sweden and abroad: from the Museum of Ethnography's summer stage and Kungsträdgården to Gröna Lund's main stage, Riksscenen in Oslo and Teatro Degollado, Guadalajara, México. The repertoire ranges from classics like <i>El Rey</i> and <i>Cielito Lindo</i> to modern favorites like <i>México en la Piel</i>, <i>Canción del Mariachi</i> and <i>Nunca es Suficiente</i>.",
-      "quote": "\"To bring a true feeling of Mexico — its music and passion — to a stage near you.\"",
-      "bio-p3": "<b>Book us</b> for weddings, birthdays, corporate events, festivals and everything in between — the full band on your stage.",
-      "fact-1": "musicians — violins, trumpets, vihuela, guitarrón & guitar",
-      "fact-2": "songs in the repertoire",
-      "fact-3": "founded in Stockholm",
-      "fact-4": "we speak with the guests in their language",
-      "book-kicker": "Book us", "book-h2": "Ready for <em>your event?</em>",
-      "book-h3": "Fast, easy and secure",
-      "book-p": "Send an inquiry — we'll get back to you with confirmation, availability and details.",
-      "book-chips-label": "We perform at for example:",
-      "chip-1": "💒 Weddings", "chip-2": "🎉 Corporate events", "chip-3": "🎂 Birthdays", "chip-4": "🎪 Festivals", "chip-5": "🎭 Cultural events",
-      "book-btn": "📩 Send booking inquiry",
-      "gdpr": "🔒 We use your details (name, email and phone) only to plan your booking. We never share your details with third parties and never use them for marketing.",
-      "foot-meta": "© 2026 Fiesta México · Photography: Karen Pérez Guzmán"
-    },
-    es: {
-      "nav-gigs": "Conciertos", "nav-videos": "Vídeos", "nav-photos": "Fotos", "nav-about": "Nosotros", "nav-book": "Contrátanos",
-      "hero-kicker": "Música mexicana auténtica · en Suecia",
-      "hero-sub": "Calor, energía y tradición — de México, a Suecia",
-      "btn-book": "Contrátanos para tu evento", "btn-videos": "Mira nuestros vídeos ↓",
-      "gigs-kicker": "Próximos conciertos", "gigs-h2": "La próxima vez que puedes <em>vernos en vivo</em>",
-      "gig-t": "Fiesta en el cementerio", "gig-month": "OCT",
-      "gig-d": "Museo Etnográfico · 11:00–17:00 · Día de Muertos con danza folclórica, mariachi y mercado",
-      "gig-empty": "Se publican más conciertos públicos continuamente — <a href=\"#boka\">contrátanos para tu evento</a>!",
-      "gig-note": "",
-      "videos-kicker": "Unas muestras", "videos-h2": "Vídeo de <em>actuaciones 2026</em>",
-      "v1-d": "Kungsträdgården / Museo Etnográfico · © Karen Pérez Guzmán",
-      "v2-d": "Kungsträdgården / Museo Etnográfico · © Karen Pérez Guzmán",
-      "v3-d": "Gröna Lund · © Nina",
-      "photos-kicker": "En imágenes", "photos-h2": "Fotos del <em>verano</em>",
-      "about-kicker": "Nosotros", "about-h2": "Fieles a la <em>tradición mexicana</em>",
-      "band-kicker": "Conoce a la banda", "band-h2": "Los músicos <em>detrás de la música</em>",
-      "genre-kicker": "¿Qué es el mariachi?",
-      "genre-p1": "El mariachi es mucho más que música. Es una tradición viva del occidente de México — un ensamble de violines, trompetas, vihuela, guitarrón y guitarra, donde los músicos se turnan al canto y los instrumentos se responden en diálogo musical. El género nació en Jalisco en el siglo XIX y desde entonces ha acompañado a los mexicanos en todas las etapas de la vida: bautizos, bodas, cumpleaños y días de duelo. Tocar mariachi es transmitir alegría, comunidad y orgullo — <i>música del pueblo</i>.",
-      "genre-p2": "En 2011, el mariachi fue inscrito en la <a href=\"https://ich.unesco.org/en/RL/mariachi-string-music-song-and-trumpet-00599\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold);text-decoration:underline;\">lista del patrimonio cultural inmaterial de la humanidad de la UNESCO</a> — un reconocimiento al papel central del género en la identidad y cultura mexicanas.",
-      "m-ola-role": "Trompeta y voz",
-      "m-ola-bio": "Formado en la escuela municipal de música y con pedagogos de canto experimentados. Ha tocado en una banda musical municipal y cantado en coros de motetes y el Coro Filarmónico Real. Con Mariachi Fiesta México casi desde el principio.",
-      "m-alejandro-role": "Violín, vihuela y voz",
-      "m-alejandro-bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.",
-      "m-helena-role": "Violín",
-      "m-helena-bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.",
-      "m-daniela-role": "Violín y voz",
-      "m-daniela-bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.",
-      "m-eric-role": "Guitarra y voz",
-      "m-fernando-photo": "aún sin foto",
-      "m-fernando-role": "Guitarra y voz",
-      "m-fernando-bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-      "m-eric-bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.",
-      "m-annemarieke-role": "Violín y voz",
-      "m-annemarieke-bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.",
-      "m-niklas-role": "Guitarrón",
-      "m-niklas-bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.",
-      "m-daniel-role": "Trompeta",
-      "m-daniel-bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.",
-      "m-simone-role": "Violín",
-      "m-simone-bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.",
-      "m-sebastian-role": "Vihuela y voz",
-      "m-sebastian-bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.",
-      "m-sigrid-role": "Violín",
-      "m-sigrid-bio": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi.",
-      "bio-p1": "Mariachi Fiesta México fue fundado en Estocolmo por músicos con vínculos con México y un amor compartido por la tradición musical mexicana. Al frente está nuestro director musical <b>Alejandro Becerra</b>, con raíces en <b>Guadalajara, la cuna del mariachi</b>. Tocamos mariachi clásico — sones, boleros y rancheras — con el calor y la energía que el género exige.",
-      "bio-p2": "Hemos actuado en escenarios culturales, festivales y eventos privados — en Suecia y en el extranjero: desde el escenario de verano del Museo Etnográfico y Kungsträdgården hasta el gran escenario de Gröna Lund, Riksscenen en Oslo y el Teatro Degollado, Guadalajara, México. El repertorio abarca desde clásicos como <i>El Rey</i> y <i>Cielito Lindo</i> hasta favoritos modernos como <i>México en la Piel</i>, <i>Canción del Mariachi</i> y <i>Nunca es Suficiente</i>.",
-      "quote": "\"Llevar un sentimiento auténtico de México — su música y su pasión — a un escenario cerca de ti.\"",
-      "bio-p3": "<b>Contrátanos</b> para bodas, cumpleaños, eventos de empresa, festivales y todo lo demás — toda la banda en tu escenario.",
-      "fact-1": "músicos — violines, trompetas, vihuela, guitarrón y guitarra",
-      "fact-2": "canciones en el repertorio",
-      "fact-3": "fundado en Estocolmo",
-      "fact-4": "hablamos con los invitados en su idioma",
-      "book-kicker": "Contrátanos", "book-h2": "¿Listos para <em>tu evento?</em>",
-      "book-h3": "Rápido, fácil y seguro",
-      "book-p": "Envía una solicitud — respondemos con confirmación, disponibilidad y detalles.",
-      "book-chips-label": "Tocamos por ejemplo en:",
-      "chip-1": "💒 Bodas", "chip-2": "🎉 Eventos de empresa", "chip-3": "🎂 Cumpleaños", "chip-4": "🎪 Festivales", "chip-5": "🎭 Eventos culturales",
-      "book-btn": "📩 Enviar solicitud de reserva",
-      "gdpr": "🔒 Utilizamos tus datos (nombre, correo y teléfono) únicamente para planear tu reserva. No los compartimos con terceros y no los utilizamos con fines de marketing.",
-      "foot-meta": "© 2026 Fiesta México · Fotografía: Karen Pérez Guzmán"
-    }
-  };
-  document.querySelectorAll("[data-i18n]").forEach(function (el) {
-    el.setAttribute("data-i18n-sv", el.innerHTML);
-  });
-  var curLang = "sv";
-  function setLang(lang) {
-    curLang = lang || "sv";
-    document.querySelectorAll(".lang span").forEach(function (s) {
-      s.classList.toggle("active", s.getAttribute("data-lang") === lang);
+</script>
+<script>
+  (function () {
+    var btn = document.getElementById("band-cta");
+    var g = document.getElementById("medlemsgalleri");
+    if (!btn || !g) return;
+    var sv = btn.getAttribute("data-i18n-sv");
+    btn.addEventListener("click", function (e) {
+      e.preventDefault();
+      var open = g.style.display !== "none";
+      g.style.display = open ? "none" : "";
+      if (open) { btn.textContent = sv; }
+      else { btn.textContent = "✕ Stäng"; g.scrollIntoView({ behavior: "smooth", block: "start" }); }
     });
-    document.documentElement.setAttribute("lang", lang === "en" ? "en" : lang === "es" ? "es" : "sv");
-    var dict = I18N[lang] || {};
-    document.querySelectorAll("[data-i18n]").forEach(function (el) {
-      var val = dict[el.getAttribute("data-i18n")] || el.getAttribute("data-i18n-sv");
-      if (val != null) el.innerHTML = val;
-    });
-  }
-  document.querySelectorAll(".lang span").forEach(function (s) {
-    s.addEventListener("click", function () { setLang(s.getAttribute("data-lang") || "sv"); });
-  });
-
-  // === Kommande spelningar: hämtas från Group Planner-feeden (gigs.json) ===
-  // Feed: JSON-array med { datum, starttid, sluttid, titel, plats, beskrivning, url }
-  // Fallback-listan ovan visas tills feeden finns / om hämtningen misslyckas.
-  (function loadGigs() {
-    var list = document.getElementById("gig-list");
-    var fallback = document.getElementById("gig-list-fallback");
-    var note = document.getElementById("gig-note");
-    var months = ["JAN","FEB","MAR","APR","MAJ","JUN","JUL","AUG","SEP","OKT","NOV","DEC"];
-    function esc(s) {
-      return String(s).replace(/[&<>"']/g, function (c) {
-        return { "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c];
-      });
-    }
-    function render(gigs) {
-      gigs.sort(function (a, b) { return (a.datum || "").localeCompare(b.datum || ""); });
-      var html = "";
-      gigs.forEach(function (g) {
-        var d = new Date(g.datum + "T00:00:00");
-        if (isNaN(d)) return;
-        var day = d.getDate();
-        var mon = months[d.getMonth()] || "";
-        var time = (g.starttid ? "kl " + g.starttid + (g.sluttid ? "–" + g.sluttid : "") : "");
-        var desc = [g.plats, time, g.beskrivning].filter(Boolean).map(esc).join(" · ");
-        var title = g.url
-          ? '<a href="' + esc(g.url) + '" target="_blank" rel="noopener" style="color:inherit;text-decoration:none;border-bottom:1px solid rgba(224,168,60,0.5);">' + esc(g.titel) + "</a>"
-          : esc(g.titel);
-        html += '<div class="gig">' +
-                  '<div class="gig-date"><b>' + day + '</b><span>' + mon + '</span></div>' +
-                  '<div class="gig-info"><div class="t">' + title + '</div>' +
-                  '<div class="d">' + desc + '</div></div>' +
-                '</div>';
-      });
-      if (!html) { note.style.display = "none"; return; } // tom feed → behåll fallback
-      var dict = I18N[curLang] || {};
-      list.innerHTML = html +
-        '<div class="gig-empty" data-i18n="gig-empty">' + (dict["gig-empty"] || fallback.querySelector(".gig-empty").innerHTML) + '</div>';
-      fallback.style.display = "none";
-      list.style.display = "";
-      note.style.display = "";
-    }
-    fetch("gigs.json?t=" + Date.now())
-      .then(function (r) { return r.ok ? r.json() : Promise.reject(); })
-      .then(render)
-      .catch(function () { /* feeden ej på plats ännu → fallback visas */ });
   })();
 </script>
+<script src="i18n.js"></script>
+<script src="gigs.js"></script>
 
-<!-- Besöksräknare: GoatCounter (cookie-fri, GDPR-vänlig).
-     Skapa gratiskonto på goatcounter.com och ersätt "ERAT-KOD" med er kod,
-     t.ex. src="//mariachifiestamexico.goatcounter.com/count" -->
 <script data-goatcounter="https://ERAT-KOD.goatcounter.com/count" async src="//gc.zgo.at/count.js"></script>
 
-<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v31edd6df95cf4e85bb4c19e7a9bdbcba1788362987495" integrity="sha512-iIg7k2xntmwu6/uSb5tpc/hySgZc4eoL31yB29W6tJFo2akwjPWcEqnCEdJvGexCL0KEQwVYv5BlowfhVz26hg==" nonce="nrcRbDn4q38PX4C6XN0e9Q==" data-cf-beacon='{"version":"2024.11.0","token":"36b4216ae2dc4d5488c249161e71fe1e","spa":2}' crossorigin="anonymous"></script>
+<script type="module" src="https://static.cloudflareinsights.com/beacon.min.js/v4bc70e2c01a94c73b74392e4234840661791215815920" integrity="sha512-L0ha0OXavK/8okipN9F8BtP84dg9DUhPERbBXzwI6dgTA55d2+yweo3pn5CSFYs45/r8md2+xvUPtTdvTNRfjA==" nonce="afCZdcRW6vcPw6rp4f60PQ==" data-cf-beacon='{"version":"2024.11.0","token":"36b4216ae2dc4d5488c249161e71fe1e","spa":2}' crossorigin="anonymous"></script>
 </body>
 </html>
+
