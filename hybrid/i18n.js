@@ -1,7 +1,8 @@
   var I18N = {
     en: {
-      "nav-gigs": "Gigs", "nav-videos": "Videos", "nav-photos": "Photos", "nav-about": "About", "nav-book": "Book us",
+      "nav-home": "Start", "nav-gigs": "Gigs", "nav-videos": "Videos", "nav-photos": "Photos", "nav-about": "About", "nav-book": "Book us",
       "hero-kicker": "Authentic Mexican Music · In Sweden",
+      "banner-t": "Fiesta en el cementerio — Party at the cemetery", "banner-btn": "Get tickets",
       "hero-sub": "Warmth, energy and tradition — from Mexico, in Sweden",
       "hero-seo": "We are a mariachi band in Stockholm playing authentic Mexican music — at weddings, corporate events, birthdays and festivals. <a href=\"#om-oss\" data-i18n=\"hero-omoss\" style=\"color:var(--gold-bright);text-decoration:none;border-bottom:1px solid rgba(224,168,60,0.5);\">Read more about us</a>", "hero-omoss": "Read more about us", "nl-h": "📬 Stay updated", "nl-p": "Get our upcoming gigs straight to your inbox — sign up for our email list.", "nl-btn": "Sign up", "nl-gdpr": "Your email is used only for gig announcements — no third-party marketing, unsubscribe anytime.",
       "teaser-kicker": "Welcome in", "teaser-h2": "What would you <em>like to see</em>?", "member-back": "All members",
@@ -53,8 +54,9 @@
       "foot-meta": "© 2026 Mariachi Fiesta México · Photography: <a href=\"https://www.1-way-ticket.com/clients\" target=\"_blank\" rel=\"noopener\" style=\"color:inherit;text-decoration:underline;\">Karen Pérez Guzmán</a>, Nina &amp; psp.gallery"
     },
     es: {
-      "nav-gigs": "Conciertos", "nav-videos": "Vídeos", "nav-photos": "Fotos", "nav-about": "Nosotros", "nav-book": "Contrátanos",
+      "nav-home": "Inicio", "nav-gigs": "Conciertos", "nav-videos": "Vídeos", "nav-photos": "Fotos", "nav-about": "Nosotros", "nav-book": "Contrátanos",
       "hero-kicker": "Música mexicana auténtica · en Suecia",
+      "banner-t": "Fiesta en el cementerio — Fest på kyrkogården", "banner-btn": "Comprar boletos",
       "hero-sub": "Calor, energía y tradición — de México, a Suecia",
       "hero-seo": "Somos un mariachi en Estocolmo que toca música mexicana auténtica — en bodas, eventos de empresa, cumpleaños y festivales. <a href=\"#om-oss\" data-i18n=\"hero-omoss\" style=\"color:var(--gold-bright);text-decoration:none;border-bottom:1px solid rgba(224,168,60,0.5);\">Conoce más de nosotros</a>", "hero-omoss": "Conoce más de nosotros", "nl-h": "📬 Mantente informado", "nl-p": "Recibe nuestros próximos conciertos directo a tu correo — inscríbete a nuestra lista.", "nl-btn": "Inscríbete", "nl-gdpr": "Tu correo se usa solo para anuncios de conciertos — sin marketing de terceros, cancela cuando quieras.",
       "btn-book": "Contrátanos para tu evento", "btn-videos": "Mira nuestros vídeos ↓",
