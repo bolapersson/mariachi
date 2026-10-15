@@ -3,8 +3,8 @@
       "nav-gigs": "Gigs", "nav-videos": "Videos", "nav-photos": "Photos", "nav-about": "About", "nav-book": "Book us",
       "hero-kicker": "Authentic Mexican Music · In Sweden",
       "hero-sub": "Warmth, energy and tradition — from Mexico, in Sweden",
-      "teaser-kicker": "Welcome in", "teaser-h2": "What would you <em>like to see</em>?", "member-more": "Read more →", "member-back": "All members",
-      "teaser-gigs": "See when we play next — and get tickets", "teaser-videos": "Watch us on film from this summer\u2019s gigs", "teaser-photos": "Photos from Gröna Lund and other stages", "teaser-about": "Meet the twelve musicians of the band", "teaser-book": "Get in touch for weddings, parties and events",
+      "hero-seo": "We are a mariachi band in Stockholm playing authentic Mexican music — at weddings, corporate events, birthdays and festivals. <a href=\"#om-oss\" data-i18n=\"hero-omoss\" style=\"color:var(--gold-bright);text-decoration:none;border-bottom:1px solid rgba(224,168,60,0.5);\">Read more about us</a>", "hero-omoss": "Read more about us", "nl-h": "📬 Stay updated", "nl-p": "Get our upcoming gigs straight to your inbox — sign up for our email list.", "nl-btn": "Sign up", "nl-gdpr": "Your email is used only for gig announcements — no third-party marketing, unsubscribe anytime.",
+      "teaser-kicker": "Welcome in", "teaser-h2": "What would you <em>like to see</em>?", "member-back": "All members",
       "btn-book": "Book us for your event", "btn-videos": "Watch our videos ↓",
       "gigs-kicker": "Upcoming gigs", "gigs-h2": "Next time you can <em>see us live</em>",
       "gig-t": "Fiesta en el cementerio — A party at the cemetery", "gig-month": "OCT",
@@ -18,7 +18,7 @@
       "v3-d": "Gröna Lund · © Nina",
       "photos-kicker": "In pictures", "photos-h2": "Photos from <em>the summer</em>",
       "about-kicker": "About us", "about-h2": "True to <em>Mexican tradition</em>",
-      "band-kicker": "Meet the band", "band-h2": "The musicians <em>behind the music</em>",
+      "band-kicker": "Meet the band", "band-cta": "Meet the musicians →", "gallery-back": "Back", "band-h2": "The musicians <em>behind the music</em>",
       "genre-kicker": "What is mariachi?",
       "genre-p1": "Mariachi is far more than music. It is a living tradition from western Mexico — an ensemble of violins, trumpets, vihuela, guitarrón and guitar, where the musicians take turns singing lead and the instruments answer each other in musical dialogue. The genre was born in Jalisco in the 19th century and has since accompanied Mexicans through every stage of life: baptisms, weddings, birthdays and days of mourning. Playing mariachi is about conveying joy, community and pride — <i>música del pueblo</i>, the music of the people.",
       "genre-p2": "In 2011, mariachi was inscribed on <a href=\"https://ich.unesco.org/en/RL/mariachi-string-music-song-and-trumpet-00599\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold);text-decoration:underline;\">UNESCO's list of the Intangible Cultural Heritage of Humanity</a> — a recognition of the genre's central role in Mexican identity and culture.",
@@ -68,6 +68,7 @@
       "nav-gigs": "Conciertos", "nav-videos": "Vídeos", "nav-photos": "Fotos", "nav-about": "Nosotros", "nav-book": "Contrátanos",
       "hero-kicker": "Música mexicana auténtica · en Suecia",
       "hero-sub": "Calor, energía y tradición — de México, a Suecia",
+      "hero-seo": "Somos un mariachi en Estocolmo que toca música mexicana auténtica — en bodas, eventos de empresa, cumpleaños y festivales. <a href=\"#om-oss\" data-i18n=\"hero-omoss\" style=\"color:var(--gold-bright);text-decoration:none;border-bottom:1px solid rgba(224,168,60,0.5);\">Conoce más de nosotros</a>", "hero-omoss": "Conoce más de nosotros", "nl-h": "📬 Mantente informado", "nl-p": "Recibe nuestros próximos conciertos directo a tu correo — inscríbete a nuestra lista.", "nl-btn": "Inscríbete", "nl-gdpr": "Tu correo se usa solo para anuncios de conciertos — sin marketing de terceros, cancela cuando quieras.",
       "btn-book": "Contrátanos para tu evento", "btn-videos": "Mira nuestros vídeos ↓",
       "gigs-kicker": "Próximos conciertos", "gigs-h2": "La próxima vez que puedes <em>vernos en vivo</em>",
       "gig-t": "Fiesta en el cementerio", "gig-month": "OCT",
@@ -81,7 +82,7 @@
       "v3-d": "Gröna Lund · © Nina",
       "photos-kicker": "En imágenes", "photos-h2": "Fotos del <em>verano</em>",
       "about-kicker": "Nosotros", "about-h2": "Fieles a la <em>tradición mexicana</em>",
-      "band-kicker": "Conoce a la banda", "band-h2": "Los músicos <em>detrás de la música</em>",
+      "band-kicker": "Conoce a la banda", "band-cta": "Conoce a los músicos →", "gallery-back": "Volver", "band-h2": "Los músicos <em>detrás de la música</em>",
       "genre-kicker": "¿Qué es el mariachi?",
       "genre-p1": "El mariachi es mucho más que música. Es una tradición viva del occidente de México — un ensamble de violines, trompetas, vihuela, guitarrón y guitarra, donde los músicos se turnan al canto y los instrumentos se responden en diálogo musical. El género nació en Jalisco en el siglo XIX y desde entonces ha acompañado a los mexicanos en todas las etapas de la vida: bautizos, bodas, cumpleaños y días de duelo. Tocar mariachi es transmitir alegría, comunidad y orgullo — <i>música del pueblo</i>.",
       "genre-p2": "En 2011, el mariachi fue inscrito en la <a href=\"https://ich.unesco.org/en/RL/mariachi-string-music-song-and-trumpet-00599\" target=\"_blank\" rel=\"noopener\" style=\"color:var(--gold);text-decoration:underline;\">lista del patrimonio cultural inmaterial de la humanidad de la UNESCO</a> — un reconocimiento al papel central del género en la identidad y cultura mexicanas.",
@@ -150,4 +151,3 @@
     s.addEventListener("click", function () { setLang(s.getAttribute("data-lang") || "sv"); });
   });
   restoreLang();
-
