@@ -1,4 +1,0 @@
-User-agent: *
-Allow: /
-
-Sitemap: https://bolapersson.github.io/mariachi/sitemap.xml
